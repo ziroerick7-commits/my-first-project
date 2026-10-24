@@ -1,0 +1,2719 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ZIRO DECOR | Luxury Home Decor</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f8f5f0;
+    color:#29231d;
+}
+
+:root{
+    --brown:#3a2417;
+    --gold:#c69b52;
+    --cream:#f8f5f0;
+    --white:#ffffff;
+    --dark:#19130e;
+}
+
+/* NAVIGATION */
+
+nav{
+    height:75px;
+    background:rgba(25,19,14,.98);
+    color:white;
+    display:flex;  
+    align-items:center;
+    justify-content:space-between;
+    padding:0 7%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-family:Georgia,serif;
+    font-size:25px;
+    letter-spacing:3px;
+    color:var(--gold);
+    font-weight:bold;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:28px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    font-size:14px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:var(--gold);
+}
+
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.cart-button{
+    border:0;
+    background:var(--gold);
+    color:#21170f;
+    padding:10px 17px;
+    border-radius:25px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.menu{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+    min-height:90vh;
+    background:
+    linear-gradient(
+        rgba(25,15,8,.55),
+        rgba(25,15,8,.72)
+    ),
+    url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2000&q=90");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+
+    padding:80px 7%;
+    color:white;
+}
+
+.hero-content{
+    max-width:760px;
+}
+
+.hero small{
+    color:#e0b96c;
+    letter-spacing:4px;
+    font-weight:bold;
+}
+
+.hero h1{
+    font-family:Georgia,serif;
+    font-size:68px;
+    line-height:1.05;
+    margin:20px 0;
+}
+
+.hero h1 span{
+    color:#dfb15b;
+}
+
+.hero p{
+    max-width:650px;
+    line-height:1.8;
+    font-size:18px;
+    color:#eee;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 25px;
+    background:var(--gold);
+    color:#21170f;
+    border:0;
+    border-radius:4px;
+    font-weight:bold;
+    cursor:pointer;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    background:#e3bb70;
+}
+
+.btn-outline{
+    margin-left:10px;
+    background:transparent;
+    color:white;
+    border:1px solid var(--gold);
+}
+
+/* SECTION */
+
+section{
+    padding:85px 7%;
+}
+
+.section-heading{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-heading small{
+    color:#b27e31;
+    letter-spacing:3px;
+    font-weight:bold;
+}
+
+.section-heading h2{
+    font-family:Georgia,serif;
+    font-size:43px;
+    margin:10px 0;
+}
+
+.section-heading p{
+    max-width:650px;
+    margin:auto;
+    color:#777;
+    line-height:1.7;
+}
+
+/* CATEGORIES */
+
+.categories{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.category-card{
+    height:320px;
+    position:relative;
+    overflow:hidden;
+    border-radius:8px;
+}
+
+.category-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.6s;
+}
+
+.category-card:hover img{
+    transform:scale(1.1);
+}
+
+.category-card::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        transparent 40%,
+        rgba(0,0,0,.8)
+    );
+}
+
+.category-info{
+    position:absolute;
+    z-index:2;
+    bottom:25px;
+    left:22px;
+    color:white;
+}
+
+.category-info h3{
+    font-family:Georgia,serif;
+    font-size:24px;
+    margin-bottom:5px;
+}
+
+/* PRODUCTS */
+
+.product-toolbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+    margin-bottom:35px;
+    flex-wrap:wrap;
+}
+
+.search{
+    flex:1;
+    min-width:250px;
+    padding:14px;
+    border:1px solid #ddd;
+    border-radius:5px;
+    outline:none;
+}
+
+.filters{
+    display:flex;
+    gap:7px;
+    flex-wrap:wrap;
+}
+
+.filter{
+    background:white;
+    border:1px solid #c8a86a;
+    padding:10px 17px;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+.filter.active,
+.filter:hover{
+    background:var(--brown);
+    color:white;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:23px;
+}
+
+.product{
+    background:white;
+    border-radius:8px;
+    overflow:hidden;
+    box-shadow:0 5px 25px rgba(0,0,0,.07);
+    transition:.3s;
+}
+
+.product:hover{
+    transform:translateY(-7px);
+}
+
+.product-image{
+    height:250px;
+    position:relative;
+    overflow:hidden;
+}
+
+.product-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.product:hover .product-image img{
+    transform:scale(1.08);
+}
+
+.product-badge{
+    position:absolute;
+    top:12px;
+    left:12px;
+    background:var(--gold);
+    color:#21170f;
+    padding:6px 10px;
+    font-size:11px;
+    font-weight:bold;
+    border-radius:3px;
+}
+
+.product-info{
+    padding:18px;
+}
+
+.product-info h3{
+    font-family:Georgia,serif;
+    font-size:20px;
+}
+
+.product-category{
+    color:#ad7d38;
+    font-size:12px;
+    margin:7px 0;
+    text-transform:uppercase;
+}
+
+.product-description{
+    color:#777;
+    font-size:13px;
+    line-height:1.5;
+    min-height:40px;
+}
+
+.price{
+    font-size:19px;
+    font-weight:bold;
+    margin:15px 0;
+}
+
+.product-buttons{
+    display:flex;
+    gap:7px;
+}
+
+.add-button{
+    flex:1;
+    background:var(--brown);
+    color:white;
+    border:0;
+    padding:11px;
+    cursor:pointer;
+    border-radius:4px;
+}
+
+.add-button:hover{
+    background:var(--gold);
+    color:#21170f;
+}
+
+.view-button{
+    padding:11px 13px;
+    border:1px solid #ddd;
+    background:white;
+    cursor:pointer;
+}
+
+/* ABOUT */
+
+.about{
+    background:var(--brown);
+    color:white;
+}
+
+.about-container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about-image img{
+    width:100%;
+    border-radius:8px;
+}
+
+.about-content small{
+    color:var(--gold);
+    letter-spacing:3px;
+}
+
+.about-content h2{
+    font-family:Georgia,serif;
+    font-size:45px;
+    margin:15px 0 20px;
+}
+
+.about-content p{
+    color:#ddd;
+    line-height:1.8;
+    margin-bottom:18px;
+}
+
+.about-features{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+    margin-top:25px;
+}
+
+.about-feature{
+    padding:17px;
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:5px;
+}
+
+.about-feature strong{
+    color:var(--gold);
+    display:block;
+    margin-bottom:5px;
+}
+
+/* SERVICES */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.service{
+    background:white;
+    padding:35px 25px;
+    text-align:center;
+    border-radius:8px;
+    box-shadow:0 5px 25px rgba(0,0,0,.07);
+}
+
+.service-icon{
+    font-size:45px;
+    margin-bottom:17px;
+}
+
+.service h3{
+    font-family:Georgia,serif;
+    font-size:22px;
+    margin-bottom:12px;
+}
+
+.service p{
+    color:#777;
+    line-height:1.7;
+}
+
+/* GALLERY */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    grid-auto-rows:220px;
+    gap:12px;
+}
+
+.gallery-item{
+    overflow:hidden;
+    border-radius:6px;
+}
+
+.gallery-item.large{
+    grid-column:span 2;
+    grid-row:span 2;
+}
+
+.gallery-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.08);
+}
+
+/* CONTACT */
+
+.contact{
+    background:#eee7dc;
+}
+
+.contact-container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+}
+
+.contact-info h2{
+    font-family:Georgia,serif;
+    font-size:43px;
+    margin:12px 0 20px;
+}
+
+.contact-info>p{
+    color:#777;
+    line-height:1.7;
+}
+
+.contact-item{
+    display:flex;
+    gap:15px;
+    margin:25px 0;
+}
+
+.contact-item-icon{
+    font-size:25px;
+}
+
+.contact-item strong{
+    display:block;
+    margin-bottom:4px;
+}
+
+.contact-item p{
+    color:#777;
+}
+
+.contact-form{
+    background:white;
+    padding:30px;
+    border-radius:8px;
+    box-shadow:0 5px 25px rgba(0,0,0,.08);
+}
+
+.form-group{
+    margin-bottom:16px;
+}
+
+.form-group label{
+    display:block;
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:7px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select{
+    width:100%;
+    padding:13px;
+    border:1px solid #ddd;
+    border-radius:4px;
+    font-family:inherit;
+    outline:none;
+}
+
+.form-group textarea{
+    height:120px;
+    resize:vertical;
+}
+
+/* CART */
+
+.cart{
+    position:fixed;
+    top:0;
+    right:-430px;
+    width:410px;
+    height:100vh;
+    background:white;
+    z-index:3000;
+    box-shadow:-5px 0 30px rgba(0,0,0,.25);
+    transition:.4s;
+    display:flex;
+    flex-direction:column;
+    padding:25px;
+}
+
+.cart.open{
+    right:0;
+}
+
+.cart-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #ddd;
+    padding-bottom:15px;
+}
+
+.close-cart{
+    background:none;
+    border:0;
+    font-size:28px;
+    cursor:pointer;
+}
+
+.cart-items{
+    flex:1;
+    overflow:auto;
+    padding:10px 0;
+}
+
+.cart-item{
+    display:flex;
+    gap:12px;
+    padding:15px 0;
+    border-bottom:1px solid #eee;
+}
+
+.cart-item img{
+    width:75px;
+    height:75px;
+    object-fit:cover;
+    border-radius:5px;
+}
+
+.cart-item-info{
+    flex:1;
+}
+
+.cart-item-info h4{
+    font-size:14px;
+}
+
+.cart-item-price{
+    color:#a6742c;
+    font-weight:bold;
+    margin:5px 0;
+}
+
+.quantity{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.quantity button{
+    width:25px;
+    height:25px;
+    border:1px solid #ddd;
+    background:white;
+    cursor:pointer;
+}
+
+.remove{
+    background:none;
+    border:0;
+    color:#a52e2e;
+    cursor:pointer;
+    font-size:12px;
+    margin-top:5px;
+}
+
+.cart-footer{
+    border-top:1px solid #ddd;
+    padding-top:20px;
+}
+
+.cart-total{
+    display:flex;
+    justify-content:space-between;
+    font-weight:bold;
+    font-size:20px;
+    margin-bottom:15px;
+}
+
+/* CHECKOUT MODAL */
+
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.75);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    z-index:4000;
+}
+
+.modal.active{
+    display:flex;
+}
+
+.modal-box{
+    background:white;
+    width:700px;
+    max-width:100%;
+    max-height:90vh;
+    overflow:auto;
+    border-radius:8px;
+    padding:30px;
+    position:relative;
+}
+
+.modal-close{
+    position:absolute;
+    top:12px;
+    right:18px;
+    background:none;
+    border:0;
+    font-size:28px;
+    cursor:pointer;
+}
+
+.checkout-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.full{
+    grid-column:1/-1;
+}
+
+/* FOOTER */
+
+footer{
+    background:var(--dark);
+    color:white;
+    padding:55px 7% 20px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:40px;
+    margin-bottom:40px;
+}
+
+footer h3{
+    color:var(--gold);
+    margin-bottom:15px;
+}
+
+footer p,
+footer a{
+    color:#aaa;
+    line-height:1.8;
+    text-decoration:none;
+}
+
+footer ul{
+    list-style:none;
+}
+
+.copyright{
+    border-top:1px solid #342820;
+    padding-top:20px;
+    text-align:center;
+    color:#777;
+}
+
+/* TOAST */
+
+.toast{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    background:var(--brown);
+    color:white;
+    padding:15px 22px;
+    border-radius:5px;
+    transform:translateY(100px);
+    opacity:0;
+    transition:.3s;
+    z-index:5000;
+}
+
+.toast.show{
+    transform:translateY(0);
+    opacity:1;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1050px){
+
+    .products{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .categories{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:750px){
+
+    nav{
+        padding:0 5%;
+    }
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:75px;
+        left:0;
+        width:100%;
+        background:var(--dark);
+        padding:25px;
+        flex-direction:column;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .hero h1{
+        font-size:43px;
+    }
+
+    .categories,
+    .products,
+    .services,
+    .about-container,
+    .contact-container{
+        grid-template-columns:1fr;
+    }
+
+    .gallery{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .gallery-item.large{
+        grid-column:span 2;
+    }
+
+    .cart{
+        width:100%;
+        right:-100%;
+    }
+
+    .checkout-grid{
+        grid-template-columns:1fr;
+    }
+
+    .full{
+        grid-column:auto;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:500px){
+
+    section{
+        padding:65px 5%;
+    }
+
+    .hero{
+        padding:60px 5%;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .categories{
+        grid-template-columns:1fr;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-item.large{
+        grid-column:span 1;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <div class="logo">
+        ZIRO DECOR
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+
+        <li><a href="#home">Home</a></li>
+        <li><a href="#categories">Collections</a></li>
+        <li><a href="#products">Shop</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+
+    </ul>
+
+    <div class="nav-right">
+
+        <button class="cart-button" onclick="openCart()">
+            🛒 Cart (<span id="cartCount">0</span>)
+        </button>
+
+        <div class="menu" onclick="toggleMenu()">
+            ☰
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <small>
+            LUXURY HOME DECOR
+        </small>
+
+        <h1>
+            Make Your Space
+            <span>Beautiful.</span>
+        </h1>
+
+        <p>
+            Discover elegant furniture, artistic decorations,
+            lighting, wall art, mirrors and accessories carefully
+            selected to give your home a luxurious and timeless look.
+        </p>
+
+        <a href="#products" class="btn">
+            EXPLORE COLLECTION
+        </a>
+
+        <a href="#contact" class="btn btn-outline">
+            CONTACT US
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- CATEGORIES -->
+
+<section id="categories">
+
+    <div class="section-heading">
+
+        <small>OUR COLLECTIONS</small>
+
+        <h2>Decorate With Style</h2>
+
+        <p>
+            Explore our carefully selected collections for modern,
+            classic and luxurious interiors.
+        </p>
+
+    </div>
+
+
+    <div class="categories">
+
+        <div class="category-card">
+
+            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=900&q=80">
+
+            <div class="category-info">
+
+                <h3>Furniture</h3>
+
+                <p>Elegant pieces for your home</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="category-card">
+
+            <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=900&q=80">
+
+            <div class="category-info">
+
+                <h3>Lighting</h3>
+
+                <p>Beautiful ambient lighting</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="category-card">
+
+            <img src="https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&w=900&q=80">
+
+            <div class="category-info">
+
+                <h3>Wall Art</h3>
+
+                <p>Art that transforms walls</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="category-card">
+
+            <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=900&q=80">
+
+            <div class="category-info">
+
+                <h3>Accessories</h3>
+
+                <p>Finishing touches</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PRODUCTS -->
+
+<section id="products">
+
+    <div class="section-heading">
+
+        <small>SHOP ZIRO DECOR</small>
+
+        <h2>Featured Products</h2>
+
+        <p>
+            Find beautiful pieces to transform your living space.
+        </p>
+
+    </div>
+
+
+    <div class="product-toolbar">
+
+        <input
+            type="text"
+            id="search"
+            class="search"
+            placeholder="Search decor..."
+            onkeyup="displayProducts()"
+        >
+
+
+        <div class="filters">
+
+            <button
+                class="filter active"
+                onclick="setCategory('All',this)">
+                All
+            </button>
+
+            <button
+                class="filter"
+                onclick="setCategory('Furniture',this)">
+                Furniture
+            </button>
+
+            <button
+                class="filter"
+                onclick="setCategory('Lighting',this)">
+                Lighting
+            </button>
+
+            <button
+                class="filter"
+                onclick="setCategory('Wall Art',this)">
+                Wall Art
+            </button>
+
+            <button
+                class="filter"
+                onclick="setCategory('Accessories',this)">
+                Accessories
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="products" id="productsGrid"></div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <div class="about-container">
+
+        <div class="about-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=90"
+            >
+
+        </div>
+
+
+        <div class="about-content">
+
+            <small>
+                ABOUT ZIRO DECOR
+            </small>
+
+            <h2>
+                Creating Beautiful Spaces With Purpose
+            </h2>
+
+            <p>
+                Ziro Decor is a modern home-decor brand focused on
+                beautiful, practical and timeless interior pieces.
+            </p>
+
+            <p>
+                From furniture and lighting to wall art, mirrors,
+                African-inspired accessories and decorative pieces,
+                our goal is to help you create a space that feels
+                uniquely yours.
+            </p>
+
+
+            <div class="about-features">
+
+                <div class="about-feature">
+
+                    <strong>✓ Premium Quality</strong>
+
+                    Carefully selected products.
+
+                </div>
+
+
+                <div class="about-feature">
+
+                    <strong>✓ Modern Designs</strong>
+
+                    Elegant contemporary styles.
+
+                </div>
+
+
+                <div class="about-feature">
+
+                    <strong>✓ Custom Orders</strong>
+
+                    We accommodate special requests.
+
+                </div>
+
+
+                <div class="about-feature">
+
+                    <strong>✓ Delivery</strong>
+
+                    Convenient delivery options.
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section id="services">
+
+    <div class="section-heading">
+
+        <small>WHAT WE OFFER</small>
+
+        <h2>Our Services</h2>
+
+    </div>
+
+
+    <div class="services">
+
+        <div class="service">
+
+            <div class="service-icon">
+                🏠
+            </div>
+
+            <h3>Interior Decoration</h3>
+
+            <p>
+                Get help selecting decorative pieces that match
+                your space, style and budget.
+            </p>
+
+        </div>
+
+
+        <div class="service">
+
+            <div class="service-icon">
+                🛋️
+            </div>
+
+            <h3>Custom Decor</h3>
+
+            <p>
+                We help create custom decorative solutions for
+                homes, offices, hotels and businesses.
+            </p>
+
+        </div>
+
+
+        <div class="service">
+
+            <div class="service-icon">
+                🚚
+            </div>
+
+            <h3>Delivery</h3>
+
+            <p>
+                Order your favourite decor pieces and arrange
+                convenient delivery to your location.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- GALLERY -->
+
+<section>
+
+    <div class="section-heading">
+
+        <small>INSPIRATION</small>
+
+        <h2>Decor Inspiration</h2>
+
+        <p>
+            A selection of interiors to inspire your next project.
+        </p>
+
+    </div>
+
+
+    <div class="gallery">
+
+        <div class="gallery-item large">
+
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=90">
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=900&q=80">
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=80">
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=900&q=80">
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <div class="contact-container">
+
+        <div class="contact-info">
+
+            <small style="color:#b27e31;letter-spacing:3px;">
+                CONTACT ZIRO DECOR
+            </small>
+
+            <h2>
+                Let's Transform Your Space
+            </h2>
+
+            <p>
+                Contact us for product enquiries, custom orders,
+                interior decoration or delivery information.
+            </p>
+
+
+            <div class="contact-item">
+
+                <div class="contact-item-icon">
+                    📍
+                </div>
+
+                <div>
+
+                    <strong>Location</strong>
+
+                    <p>
+                        Nairobi, Kenya
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <div class="contact-item-icon">
+                    📞
+                </div>
+
+                <div>
+
+                    <strong>Phone</strong>
+
+                    <p>
+                        +254 700 000 000
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <div class="contact-item-icon">
+                    📧
+                </div>
+
+                <div>
+
+                    <strong>Email</strong>
+
+                    <p>
+                        hello@zirodecor.co.ke
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <form
+            class="contact-form"
+            onsubmit="sendContact(event)"
+        >
+
+            <h3 style="
+                font-family:Georgia,serif;
+                font-size:27px;
+                margin-bottom:20px;
+            ">
+                Send a Message
+            </h3>
+
+
+            <div class="form-group">
+
+                <label>Name</label>
+
+                <input
+                    id="contactName"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Email</label>
+
+                <input
+                    id="contactEmail"
+                    type="email"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Phone</label>
+
+                <input
+                    id="contactPhone"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Message</label>
+
+                <textarea
+                    id="contactMessage"
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <button class="btn" type="submit">
+                SEND MESSAGE
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-grid">
+
+        <div>
+
+            <h3>ZIRO DECOR</h3>
+
+            <p>
+                Luxury furniture, wall art, lighting and accessories
+                for beautiful modern spaces.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>Navigation</h3>
+
+            <ul>
+
+                <li><a href="#home">Home</a></li>
+
+                <li><a href="#products">Shop</a></li>
+
+                <li><a href="#about">About</a></li>
+
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <h3>Collections</h3>
+
+            <p>Furniture</p>
+
+            <p>Lighting</p>
+
+            <p>Wall Art</p>
+
+            <p>Accessories</p>
+
+        </div>
+
+
+        <div>
+
+            <h3>Social</h3>
+
+            <p>Instagram</p>
+
+            <p>Facebook</p>
+
+            <p>TikTok</p>
+
+            <p>WhatsApp</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 Ziro Decor. All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+<!-- CART -->
+
+<div class="cart" id="cart">
+
+    <div class="cart-header">
+
+        <h2>Your Cart</h2>
+
+        <button
+            class="close-cart"
+            onclick="closeCart()"
+        >
+            ×
+        </button>
+
+    </div>
+
+
+    <div
+        class="cart-items"
+        id="cartItems"
+    ></div>
+
+
+    <div class="cart-footer">
+
+        <div class="cart-total">
+
+            <span>Total</span>
+
+            <span>
+                KSh <span id="cartTotal">0</span>
+            </span>
+
+        </div>
+
+
+        <button
+            class="btn"
+            style="width:100%"
+            onclick="openCheckout()"
+        >
+            CHECKOUT
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- CHECKOUT -->
+
+<div class="modal" id="checkoutModal">
+
+    <div class="modal-box">
+
+        <button
+            class="modal-close"
+            onclick="closeCheckout()"
+        >
+            ×
+        </button>
+
+
+        <h2 style="
+            font-family:Georgia,serif;
+            margin-bottom:8px;
+        ">
+            Complete Your Order
+        </h2>
+
+
+        <p style="
+            color:#777;
+            margin-bottom:25px;
+        ">
+            Enter your details below.
+        </p>
+
+
+        <form onsubmit="placeOrder(event)">
+
+            <div class="checkout-grid">
+
+                <div class="form-group">
+
+                    <label>Full Name</label>
+
+                    <input
+                        id="customerName"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Phone Number</label>
+
+                    <input
+                        id="customerPhone"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Email</label>
+
+                    <input
+                        id="customerEmail"
+                        type="email"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Delivery Location</label>
+
+                    <input
+                        id="customerLocation"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group full">
+
+                    <label>Payment Method</label>
+
+                    <select id="payment">
+
+                        <option>
+                            M-PESA
+                        </option>
+
+                        <option>
+                            Cash on Delivery
+                        </option>
+
+                        <option>
+                            Bank Transfer
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group full">
+
+                    <label>Order Notes</label>
+
+                    <textarea id="orderNotes"></textarea>
+
+                </div>
+
+            </div>
+
+
+            <div style="
+                padding:15px;
+                background:#f6f0e5;
+                margin-bottom:20px;
+            ">
+
+                <strong>
+                    Order Total:
+                </strong>
+
+                KSh
+                <span id="checkoutTotal">
+                    0
+                </span>
+
+            </div>
+
+
+            <button class="btn" type="submit">
+
+                PLACE ORDER
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- TOAST -->
+
+<div class="toast" id="toast"></div>
+
+
+<script>
+
+/* ================================
+   PRODUCT DATABASE
+================================ */
+
+const products = [
+
+{
+    id:1,
+    name:"Luxury Velvet Sofa",
+    category:"Furniture",
+    price:85000,
+    image:"https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=900&q=80",
+    description:"Elegant velvet sofa for a sophisticated living room."
+},
+
+{
+    id:2,
+    name:"Modern Lounge Chair",
+    category:"Furniture",
+    price:28500,
+    image:"https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=900&q=80",
+    description:"Comfortable modern chair with premium finishing."
+},
+
+{
+    id:3,
+    name:"Luxury Pendant Light",
+    category:"Lighting",
+    price:18500,
+    image:"https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&w=900&q=80",
+    description:"Stylish pendant light for elegant interiors."
+},
+
+{
+    id:4,
+    name:"Golden Table Lamp",
+    category:"Lighting",
+    price:9500,
+    image:"https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=900&q=80",
+    description:"Elegant gold table lamp with warm lighting."
+},
+
+{
+    id:5,
+    name:"African Wall Art",
+    category:"Wall Art",
+    price:12000,
+    image:"https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&w=900&q=80",
+    description:"Beautiful African-inspired decorative wall art."
+},
+
+{
+    id:6,
+    name:"Abstract Canvas",
+    category:"Wall Art",
+    price:14500,
+    image:"https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=900&q=80",
+    description:"Modern abstract canvas artwork."
+},
+
+{
+    id:7,
+    name:"Decorative Ceramic Vase",
+    category:"Accessories",
+    price:5500,
+    image:"https://images.unsplash.com/photo-1612196808214-b8e1d6145a8c?auto=format&fit=crop&w=900&q=80",
+    description:"Premium ceramic vase for tables and shelves."
+},
+
+{
+    id:8,
+    name:"Luxury Decorative Mirror",
+    category:"Accessories",
+    price:22000,
+    image:"https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=900&q=80",
+    description:"Statement mirror designed for luxury interiors."
+},
+
+{
+    id:9,
+    name:"Designer Coffee Table",
+    category:"Furniture",
+    price:35000,
+    image:"https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=900&q=80",
+    description:"Contemporary coffee table with premium finish."
+},
+
+{
+    id:10,
+    name:"Luxury Floor Lamp",
+    category:"Lighting",
+    price:16000,
+    image:"https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=900&q=80",
+    description:"Elegant floor lamp for living rooms and bedrooms."
+},
+
+{
+    id:11,
+    name:"Premium Wall Sculpture",
+    category:"Wall Art",
+    price:18000,
+    image:"https://images.unsplash.com/photo-1577083288073-40892c0860a4?auto=format&fit=crop&w=900&q=80",
+    description:"Unique decorative sculpture for statement walls."
+},
+
+{
+    id:12,
+    name:"Luxury Throw Pillows",
+    category:"Accessories",
+    price:4500,
+    image:"https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=900&q=80",
+    description:"Soft decorative pillows with premium fabric."
+}
+
+];
+
+
+/* ================================
+   VARIABLES
+================================ */
+
+let cart =
+JSON.parse(localStorage.getItem("ziroDecorCart")) || [];
+
+let currentCategory = "All";
+
+
+/* ================================
+   DISPLAY PRODUCTS
+================================ */
+
+function displayProducts(){
+
+    const grid =
+    document.getElementById("productsGrid");
+
+    const search =
+    document.getElementById("search")
+    .value
+    .toLowerCase();
+
+
+    const filtered =
+    products.filter(product => {
+
+        const categoryMatch =
+        currentCategory === "All" ||
+        product.category === currentCategory;
+
+
+        const searchMatch =
+        product.name
+        .toLowerCase()
+        .includes(search) ||
+
+        product.category
+        .toLowerCase()
+        .includes(search);
+
+
+        return categoryMatch && searchMatch;
+
+    });
+
+
+    if(filtered.length === 0){
+
+        grid.innerHTML = `
+
+            <div style="
+                grid-column:1/-1;
+                text-align:center;
+                padding:50px;
+            ">
+
+                <h3>
+                    No products found
+                </h3>
+
+                <p style="color:#777;">
+                    Try another search.
+                </p>
+
+            </div>
+
+        `;
+
+        return;
+    }
+
+
+    grid.innerHTML =
+
+    filtered.map(product => `
+
+        <div class="product">
+
+            <div class="product-image">
+
+                <img
+                    src="${product.image}"
+                    alt="${product.name}"
+                >
+
+                <span class="product-badge">
+                    ${product.category}
+                </span>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <h3>
+                    ${product.name}
+                </h3>
+
+
+                <div class="product-category">
+                    ${product.category}
+                </div>
+
+
+                <p class="product-description">
+                    ${product.description}
+                </p>
+
+
+                <div class="price">
+                    KSh ${product.price.toLocaleString()}
+                </div>
+
+
+                <div class="product-buttons">
+
+                    <button
+                        class="add-button"
+                        onclick="addToCart(${product.id})"
+                    >
+                        Add to Cart
+                    </button>
+
+
+                    <button
+                        class="view-button"
+                        onclick="viewProduct(${product.id})"
+                    >
+                        👁
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    `).join("");
+
+}
+
+
+/* ================================
+   FILTER
+================================ */
+
+function setCategory(category,button){
+
+    currentCategory = category;
+
+
+    document
+    .querySelectorAll(".filter")
+    .forEach(btn =>
+        btn.classList.remove("active")
+    );
+
+
+    button.classList.add("active");
+
+    displayProducts();
+
+}
+
+
+/* ================================
+   ADD TO CART
+================================ */
+
+function addToCart(id){
+
+    const product =
+    products.find(p => p.id === id);
+
+
+    const existing =
+    cart.find(item => item.id === id);
+
+
+    if(existing){
+
+        existing.quantity++;
+
+    }else{
+
+        cart.push({
+
+            ...product,
+
+            quantity:1
+
+        });
+
+    }
+
+
+    saveCart();
+
+
+    showToast(
+        product.name +
+        " added to cart"
+    );
+
+}
+
+
+/* ================================
+   SAVE CART
+================================ */
+
+function saveCart(){
+
+    localStorage.setItem(
+        "ziroDecorCart",
+        JSON.stringify(cart)
+    );
+
+    updateCart();
+
+}
+
+
+/* ================================
+   UPDATE CART
+================================ */
+
+function updateCart(){
+
+    const count =
+    cart.reduce(
+        (sum,item) =>
+        sum + item.quantity,
+        0
+    );
+
+
+    document.getElementById(
+        "cartCount"
+    ).textContent = count;
+
+
+    const container =
+    document.getElementById(
+        "cartItems"
+    );
+
+
+    if(cart.length === 0){
+
+        container.innerHTML = `
+
+            <div style="
+                text-align:center;
+                padding:60px 10px;
+                color:#777;
+            ">
+
+                <div style="
+                    font-size:50px;
+                ">
+                    🛒
+                </div>
+
+                <h3>
+                    Your cart is empty
+                </h3>
+
+                <p>
+                    Add some beautiful decor.
+                </p>
+
+            </div>
+
+        `;
+
+    }else{
+
+        container.innerHTML =
+
+        cart.map(item => `
+
+            <div class="cart-item">
+
+                <img
+                    src="${item.image}"
+                    alt="${item.name}"
+                >
+
+
+                <div class="cart-item-info">
+
+                    <h4>
+                        ${item.name}
+                    </h4>
+
+
+                    <div class="cart-item-price">
+
+                        KSh
+                        ${item.price.toLocaleString()}
+
+                    </div>
+
+
+                    <div class="quantity">
+
+                        <button
+                            onclick="changeQuantity(${item.id},-1)"
+                        >
+                            −
+                        </button>
+
+
+                        <span>
+                            ${item.quantity}
+                        </span>
+
+
+                        <button
+                            onclick="changeQuantity(${item.id},1)"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+
+                    <button
+                        class="remove"
+                        onclick="removeFromCart(${item.id})"
+                    >
+                        Remove
+                    </button>
+
+                </div>
+
+            </div>
+
+        `).join("");
+
+    }
+
+
+    const total =
+    cart.reduce(
+        (sum,item) =>
+        sum +
+        item.price *
+        item.quantity,
+        0
+    );
+
+
+    document.getElementById(
+        "cartTotal"
+    ).textContent =
+    total.toLocaleString();
+
+
+    document.getElementById(
+        "checkoutTotal"
+    ).textContent =
+    total.toLocaleString();
+
+}
+
+
+/* ================================
+   QUANTITY
+================================ */
+
+function changeQuantity(id,change){
+
+    const item =
+    cart.find(item =>
+        item.id === id
+    );
+
+
+    if(!item) return;
+
+
+    item.quantity += change;
+
+
+    if(item.quantity <= 0){
+
+        cart =
+        cart.filter(
+            item =>
+            item.id !== id
+        );
+
+    }
+
+
+    saveCart();
+
+}
+
+
+/* ================================
+   REMOVE
+================================ */
+
+function removeFromCart(id){
+
+    cart =
+    cart.filter(
+        item =>
+        item.id !== id
+    );
+
+
+    saveCart();
+
+
+    showToast(
+        "Product removed"
+    );
+
+}
+
+
+/* ================================
+   OPEN CART
+================================ */
+
+function openCart(){
+
+    document
+    .getElementById("cart")
+    .classList.add("open");
+
+    updateCart();
+
+}
+
+
+/* ================================
+   CLOSE CART
+================================ */
+
+function closeCart(){
+
+    document
+    .getElementById("cart")
+    .classList.remove("open");
+
+}
+
+
+/* ================================
+   VIEW PRODUCT
+================================ */
+
+function viewProduct(id){
+
+    const product =
+    products.find(
+        p => p.id === id
+    );
+
+
+    alert(
+
+        product.name +
+
+        "\n\nCategory: " +
+        product.category +
+
+        "\nPrice: KSh " +
+        product.price.toLocaleString() +
+
+        "\n\n" +
+
+        product.description
+
+    );
+
+}
+
+
+/* ================================
+   CHECKOUT
+================================ */
+
+function openCheckout(){
+
+    if(cart.length === 0){
+
+        showToast(
+            "Your cart is empty"
+        );
+
+        return;
+
+    }
+
+
+    document
+    .getElementById(
+        "checkoutModal"
+    )
+    .classList.add("active");
+
+
+    updateCart();
+
+}
+
+
+/* ================================
+   CLOSE CHECKOUT
+================================ */
+
+function closeCheckout(){
+
+    document
+    .getElementById(
+        "checkoutModal"
+    )
+    .classList.remove("active");
+
+}
+
+
+/* ================================
+   PLACE ORDER
+================================ */
+
+function placeOrder(event){
+
+    event.preventDefault();
+
+
+    if(cart.length === 0){
+
+        showToast(
+            "Your cart is empty"
+        );
+
+        return;
+
+    }
+
+
+    const name =
+    document.getElementById(
+        "customerName"
+    ).value;
+
+
+    const phone =
+    document.getElementById(
+        "customerPhone"
+    ).value;
+
+
+    const location =
+    document.getElementById(
+        "customerLocation"
+    ).value;
+
+
+    const payment =
+    document.getElementById(
+        "payment"
+    ).value;
+
+
+    const notes =
+    document.getElementById(
+        "orderNotes"
+    ).value;
+
+
+    let message =
+    "Hello Ziro Decor!%0A%0A";
+
+
+    message +=
+    "I would like to place an order.%0A%0A";
+
+
+    cart.forEach(item => {
+
+        message +=
+
+        item.name +
+
+        " x " +
+
+        item.quantity +
+
+        " = KSh " +
+
+        (
+            item.price *
+            item.quantity
+        ).toLocaleString() +
+
+        "%0A";
+
+    });
+
+
+    const total =
+    cart.reduce(
+        (sum,item) =>
+        sum +
+        item.price *
+        item.quantity,
+        0
+    );
+
+
+    message +=
+    "%0A*Total: KSh " +
+    total.toLocaleString() +
+    "*";
+
+
+    message +=
+    "%0A%0AName: " +
+    encodeURIComponent(name);
+
+
+    message +=
+    "%0APhone: " +
+    encodeURIComponent(phone);
+
+
+    message +=
+    "%0ALocation: " +
+    encodeURIComponent(location);
+
+
+    message +=
+    "%0APayment: " +
+    encodeURIComponent(payment);
+
+
+    if(notes){
+
+        message +=
+        "%0ANotes: " +
+        encodeURIComponent(notes);
+
+    }
+
+
+    /*
+       CHANGE THIS NUMBER
+       TO YOUR REAL WHATSAPP NUMBER.
+    */
+
+    const whatsappNumber =
+    "254700000000";
+
+
+    window.open(
+
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        message,
+
+        "_blank"
+
+    );
+
+
+    cart = [];
+
+    saveCart();
+
+    closeCheckout();
+
+    closeCart();
+
+
+    showToast(
+        "Order prepared successfully!"
+    );
+
+}
+
+
+/* ================================
+   CONTACT FORM
+================================ */
+
+function sendContact(event){
+
+    event.preventDefault();
+
+
+    const name =
+    document.getElementById(
+        "contactName"
+    ).value;
+
+
+    const email =
+    document.getElementById(
+        "contactEmail"
+    ).value;
+
+
+    const phone =
+    document.getElementById(
+        "contactPhone"
+    ).value;
+
+
+    const message =
+    document.getElementById(
+        "contactMessage"
+    ).value;
+
+
+    const whatsappNumber =
+    "254700000000";
+
+
+    const whatsappMessage =
+
+    "Hello Ziro Decor!%0A%0A" +
+
+    "Name: " +
+    encodeURIComponent(name) +
+
+    "%0AEmail: " +
+    encodeURIComponent(email) +
+
+    "%0APhone: " +
+    encodeURIComponent(phone) +
+
+    "%0A%0AMessage:%0A" +
+
+    encodeURIComponent(message);
+
+
+    window.open(
+
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        whatsappMessage,
+
+        "_blank"
+
+    );
+
+
+    event.target.reset();
+
+
+    showToast(
+        "Opening WhatsApp..."
+    );
+
+}
+
+
+/* ================================
+   MOBILE MENU
+================================ */
+
+function toggleMenu(){
+
+    document
+    .getElementById("navLinks")
+    .classList.toggle("active");
+
+}
+
+
+/* ================================
+   TOAST
+================================ */
+
+function showToast(message){
+
+    const toast =
+    document.getElementById(
+        "toast"
+    );
+
+
+    toast.textContent =
+    message;
+
+
+    toast.classList.add(
+        "show"
+    );
+
+
+    setTimeout(() => {
+
+        toast.classList.remove(
+            "show"
+        );
+
+    },3000);
+
+}
+
+
+/* ================================
+   INITIALIZE
+================================ */
+
+displayProducts();
+
+updateCart();
+
+</script>
+
+</body>
+</html>
+```

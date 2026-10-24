@@ -1,0 +1,2298 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>IMARA ROYALE | Luxury Hotel</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Poppins,sans-serif;
+    background:#090909;
+    color:#fff;
+    line-height:1.7;
+}
+
+h1,h2,h3,h4,.logo{
+    font-family:"Playfair Display",serif;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button{
+    font-family:Poppins,sans-serif;
+    cursor:pointer;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+header{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+}
+
+.navbar{
+    width:90%;
+    max-width:1400px;
+    margin:auto;
+
+    padding:25px 0;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:27px;
+    letter-spacing:4px;
+}
+
+.logo span{
+    color:#c9a227;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+.nav-links a{
+    font-size:13px;
+    letter-spacing:1px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#c9a227;
+}
+
+.book-button{
+    background:#c9a227;
+    border:0;
+    padding:13px 24px;
+    color:#080808;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.book-button:hover{
+    background:#fff;
+}
+
+.menu{
+    display:none;
+    font-size:28px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.48),
+        rgba(0,0,0,.75)
+    ),
+    url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=2000&q=90");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    width:90%;
+    max-width:900px;
+}
+
+.hero-small{
+    color:#c9a227;
+    letter-spacing:6px;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(55px,9vw,110px);
+    line-height:1;
+}
+
+.hero h1 span{
+    color:#c9a227;
+}
+
+.hero p{
+    max-width:650px;
+    margin:30px auto;
+    color:#eee;
+    font-size:17px;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.primary{
+    background:#c9a227;
+    color:#111;
+    border:0;
+    padding:15px 28px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.primary:hover{
+    background:#fff;
+    transform:translateY(-3px);
+}
+
+.secondary{
+    border:1px solid #fff;
+    padding:14px 28px;
+    transition:.3s;
+}
+
+.secondary:hover{
+    background:#fff;
+    color:#111;
+}
+
+
+/* =========================
+   GENERAL
+========================= */
+
+section{
+    padding:110px 6%;
+}
+
+.section-title{
+    max-width:750px;
+    margin:0 auto 60px;
+    text-align:center;
+}
+
+.gold{
+    color:#c9a227;
+    letter-spacing:3px;
+    font-size:13px;
+}
+
+.section-title h2{
+    font-size:55px;
+    margin:10px 0 15px;
+}
+
+.section-title p{
+    color:#999;
+}
+
+
+/* =========================
+   BOOKING
+========================= */
+
+.booking{
+    background:#111;
+}
+
+.booking-box{
+    max-width:1250px;
+    margin:auto;
+}
+
+.booking-form{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.form-control{
+    display:flex;
+    flex-direction:column;
+}
+
+.form-control label{
+    color:#c9a227;
+    font-size:13px;
+    margin-bottom:7px;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    background:#181818;
+    color:white;
+    border:1px solid #333;
+    padding:15px;
+    outline:none;
+    font-family:Poppins,sans-serif;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    border-color:#c9a227;
+}
+
+textarea{
+    min-height:120px;
+    resize:vertical;
+}
+
+.full{
+    grid-column:1/-1;
+}
+
+.booking-result{
+    margin-top:20px;
+    color:#c9a227;
+    text-align:center;
+}
+
+
+/* =========================
+   ROOMS
+========================= */
+
+.rooms{
+    background:#090909;
+}
+
+.rooms-grid{
+    max-width:1400px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+}
+
+.room-card{
+    background:#151515;
+    overflow:hidden;
+    transition:.4s;
+}
+
+.room-card:hover{
+    transform:translateY(-8px);
+}
+
+.room-image{
+    height:380px;
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:flex-end;
+    align-items:flex-end;
+
+    padding:20px;
+}
+
+.room-image span{
+    background:#c9a227;
+    color:#111;
+    padding:8px 15px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.room1{
+    background-image:url("https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1400&q=85");
+}
+
+.room2{
+    background-image:url("https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1400&q=85");
+}
+
+.room3{
+    background-image:url("https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1400&q=85");
+}
+
+.room4{
+    background-image:url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85");
+}
+
+.room-content{
+    padding:30px;
+}
+
+.room-content h3{
+    font-size:30px;
+}
+
+.room-content p{
+    color:#999;
+    margin:12px 0 20px;
+}
+
+.room-info{
+    display:flex;
+    gap:25px;
+    color:#c9a227;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+.outline{
+    background:transparent;
+    border:1px solid #c9a227;
+    color:white;
+    padding:11px 20px;
+}
+
+.outline:hover{
+    background:#c9a227;
+    color:#111;
+}
+
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.experience{
+    padding:0;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+}
+
+.experience-image{
+    min-height:700px;
+
+    background:
+    url("https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1400&q=85")
+    center/cover;
+}
+
+.experience-content{
+    background:#151515;
+    padding:100px 9%;
+}
+
+.experience-content h2{
+    font-size:50px;
+    line-height:1.2;
+    margin:20px 0;
+}
+
+.experience-content h2 span{
+    color:#c9a227;
+}
+
+.experience-content>p{
+    color:#aaa;
+    margin-bottom:40px;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.feature strong{
+    color:#c9a227;
+    font-size:20px;
+}
+
+.feature h4{
+    margin:8px 0;
+}
+
+.feature p{
+    color:#888;
+    font-size:13px;
+}
+
+
+/* =========================
+   RESTAURANT
+========================= */
+
+.restaurant{
+    background:#0e0e0e;
+}
+
+.restaurant-grid{
+    max-width:1300px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.restaurant-card{
+    background:#171717;
+    overflow:hidden;
+}
+
+.food-image{
+    height:300px;
+    background-size:cover;
+    background-position:center;
+}
+
+.food1{
+    background-image:url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=85");
+}
+
+.food2{
+    background-image:url("https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1200&q=85");
+}
+
+.food3{
+    background-image:url("https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=1200&q=85");
+}
+
+.restaurant-card-content{
+    padding:25px;
+}
+
+.restaurant-card h3{
+    font-size:27px;
+}
+
+.restaurant-card p{
+    color:#888;
+    margin-top:10px;
+}
+
+
+/* =========================
+   AMENITIES
+========================= */
+
+.amenities{
+    background:#090909;
+}
+
+.amenity-grid{
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.amenity{
+    text-align:center;
+    border:1px solid #252525;
+    padding:40px 20px;
+    transition:.3s;
+}
+
+.amenity:hover{
+    border-color:#c9a227;
+    transform:translateY(-5px);
+}
+
+.amenity-icon{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.amenity h3{
+    margin-bottom:8px;
+}
+
+.amenity p{
+    color:#888;
+    font-size:13px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+    min-height:650px;
+
+    display:flex;
+    align-items:center;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.65),
+        rgba(0,0,0,.82)
+    ),
+    url("https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1800&q=90")
+    center/cover;
+}
+
+.about-content{
+    max-width:700px;
+}
+
+.about h2{
+    font-size:60px;
+    line-height:1.15;
+    margin:20px 0;
+}
+
+.about h2 span{
+    color:#c9a227;
+}
+
+.about p{
+    color:#ccc;
+    margin-bottom:18px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+    background:#111;
+}
+
+.contact-form{
+    max-width:750px;
+    margin:auto;
+
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.contact-result{
+    text-align:center;
+    color:#c9a227;
+    margin-top:20px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#050505;
+    padding:70px 6% 20px;
+}
+
+.footer-grid{
+    max-width:1400px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:40px;
+}
+
+.footer-grid h4{
+    color:#c9a227;
+    margin-bottom:15px;
+}
+
+.footer-grid p,
+.footer-grid a{
+    display:block;
+    color:#777;
+    margin-bottom:7px;
+    font-size:14px;
+}
+
+.footer-grid a:hover{
+    color:#c9a227;
+}
+
+.copyright{
+    max-width:1400px;
+    margin:50px auto 0;
+
+    padding-top:25px;
+
+    border-top:1px solid #222;
+
+    text-align:center;
+
+    color:#555;
+    font-size:13px;
+}
+
+
+/* =========================
+   LOGIN MODAL
+========================= */
+
+.modal{
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,.85);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:5000;
+}
+
+.modal.active{
+    display:flex;
+}
+
+.modal-box{
+    width:90%;
+    max-width:450px;
+
+    background:#151515;
+
+    padding:40px;
+
+    position:relative;
+}
+
+.close{
+    position:absolute;
+    right:20px;
+    top:15px;
+
+    font-size:28px;
+    color:#aaa;
+
+    cursor:pointer;
+}
+
+.close:hover{
+    color:#c9a227;
+}
+
+.modal-box h2{
+    font-size:35px;
+    margin-bottom:25px;
+}
+
+.modal-form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.switch{
+    text-align:center;
+    color:#888;
+    margin-top:20px;
+}
+
+.switch span{
+    color:#c9a227;
+    cursor:pointer;
+}
+
+
+/* =========================
+   NOTIFICATION
+========================= */
+
+.notification{
+    position:fixed;
+
+    right:20px;
+    bottom:20px;
+
+    background:#c9a227;
+    color:#111;
+
+    padding:15px 25px;
+
+    transform:translateX(150%);
+
+    transition:.4s;
+
+    z-index:6000;
+}
+
+.notification.show{
+    transform:translateX(0);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1000px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .navbar>.book-button{
+        display:none;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .rooms-grid{
+        grid-template-columns:1fr;
+    }
+
+    .experience{
+        grid-template-columns:1fr;
+    }
+
+    .experience-image{
+        min-height:500px;
+    }
+
+    .restaurant-grid{
+        grid-template-columns:1fr;
+    }
+
+    .amenity-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+
+@media(max-width:600px){
+
+    section{
+        padding:80px 5%;
+    }
+
+    .hero h1{
+        font-size:55px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .booking-form{
+        grid-template-columns:1fr;
+    }
+
+    .full{
+        grid-column:auto;
+    }
+
+    .section-title h2{
+        font-size:40px;
+    }
+
+    .experience-content{
+        padding:70px 7%;
+    }
+
+    .experience-content h2{
+        font-size:40px;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .amenity-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .about h2{
+        font-size:45px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+IMARA   <span> ROYALE </span>
+</div>
+
+<ul class="nav-links">
+
+<li>
+<a href="#home">Home</a>
+</li>
+
+<li>
+<a href="#rooms">Rooms</a>
+</li>
+
+<li>
+<a href="#experience">Experience</a>
+</li>
+
+<li>
+<a href="#restaurant">Restaurant</a>
+</li>
+
+<li>
+<a href="#about">About</a>
+</li>
+
+<li>
+<a href="#contact">Contact</a>
+</li>
+
+</ul>
+
+<button class="book-button" onclick="scrollBooking()">
+BOOK NOW
+</button>
+
+<div class="menu" onclick="mobileMenu()">
+☰
+</div>
+
+</nav>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<div class="hero-small">
+WELCOME TO IMARA ROYALE 
+</div>
+
+<h1>
+A World Of
+<span>Luxury</span>
+</h1>
+
+<p>
+Discover exceptional hospitality, elegant rooms,
+fine dining and unforgettable experiences
+in the heart of paradise.
+</p>
+
+<div class="hero-buttons">
+
+<button class="primary" onclick="scrollBooking()">
+RESERVE YOUR STAY
+</button>
+
+<a href="#rooms" class="secondary">
+EXPLORE ROOMS
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     BOOKING
+========================= -->
+
+<section class="booking" id="booking">
+
+<div class="booking-box">
+
+<div class="section-title">
+
+<div class="gold">
+RESERVE YOUR EXPERIENCE
+</div>
+
+<h2>
+Book Your Stay
+</h2>
+
+<p>
+Tell us when you would like to experience
+IMARA ROYALE .
+</p>
+
+</div>
+
+
+<form class="booking-form" id="bookingForm">
+
+
+<div class="form-control">
+
+<label>Full Name</label>
+
+<input
+type="text"
+id="name"
+placeholder="Your full name"
+required>
+
+</div>
+
+
+<div class="form-control">
+
+<label>Email Address</label>
+
+<input
+type="email"
+id="email"
+placeholder="Your email"
+required>
+
+</div>
+
+
+<div class="form-control">
+
+<label>Phone Number</label>
+
+<input
+type="tel"
+id="phone"
+placeholder="+254..."
+required>
+
+</div>
+
+
+<div class="form-control">
+
+<label>Select Room</label>
+
+<select id="room">
+
+<option>Royal Deluxe Room</option>
+
+<option>Executive Suite</option>
+
+<option>Presidential Suite</option>
+
+<option>Ocean View Villa</option>
+
+</select>
+
+</div>
+
+
+<div class="form-control">
+
+<label>Check In</label>
+
+<input
+type="date"
+id="checkin"
+required>
+
+</div>
+
+
+<div class="form-control">
+
+<label>Check Out</label>
+
+<input
+type="date"
+id="checkout"
+required>
+
+</div>
+
+
+<div class="form-control">
+
+<label>Guests</label>
+
+<select id="guests">
+
+<option>1 Guest</option>
+<option>2 Guests</option>
+<option>3 Guests</option>
+<option>4 Guests</option>
+<option>5 Guests</option>
+<option>6 Guests</option>
+
+</select>
+
+</div>
+
+
+<div class="form-control">
+
+<label>Special Request</label>
+
+<input
+type="text"
+id="request"
+placeholder="Optional">
+
+</div>
+
+
+<button class="primary full" type="submit">
+
+CONFIRM RESERVATION
+
+</button>
+
+</form>
+
+<div
+class="booking-result"
+id="bookingResult">
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     ROOMS
+========================= -->
+
+<section class="rooms" id="rooms">
+
+<div class="section-title">
+
+<div class="gold">
+ACCOMMODATION
+</div>
+
+<h2>
+Rooms & Suites
+</h2>
+
+<p>
+Beautifully designed spaces created
+for comfort, privacy and sophistication.
+</p>
+
+</div>
+
+
+<div class="rooms-grid">
+
+
+<!-- ROOM -->
+
+<div class="room-card">
+
+<div class="room-image room1">
+
+<span>
+FROM $250 / NIGHT
+</span>
+
+</div>
+
+<div class="room-content">
+
+<h3>
+Royal Deluxe Room
+</h3>
+
+<p>
+Elegant accommodation featuring a king-size bed,
+marble bathroom and breathtaking city views.
+</p>
+
+<div class="room-info">
+
+<span>🛏 King Bed</span>
+<span>👤 2 Guests</span>
+
+</div>
+
+<button
+class="outline"
+onclick="chooseRoom('Royal Deluxe Room')">
+
+BOOK ROOM
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- ROOM -->
+
+<div class="room-card">
+
+<div class="room-image room2">
+
+<span>
+FROM $450 / NIGHT
+</span>
+
+</div>
+
+<div class="room-content">
+
+<h3>
+Executive Suite
+</h3>
+
+<p>
+A spacious suite featuring a private lounge,
+luxurious bathroom and private balcony.
+</p>
+
+<div class="room-info">
+
+<span>🛏 King Bed</span>
+<span>👤 3 Guests</span>
+
+</div>
+
+<button
+class="outline"
+onclick="chooseRoom('Executive Suite')">
+
+BOOK ROOM
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- ROOM -->
+
+<div class="room-card">
+
+<div class="room-image room3">
+
+<span>
+FROM $900 / NIGHT
+</span>
+
+</div>
+
+<div class="room-content">
+
+<h3>
+Presidential Suite
+</h3>
+
+<p>
+Experience extraordinary luxury with private
+dining, lounge and premium services.
+</p>
+
+<div class="room-info">
+
+<span>🛏 King Bed</span>
+<span>👤 4 Guests</span>
+
+</div>
+
+<button
+class="outline"
+onclick="chooseRoom('Presidential Suite')">
+
+BOOK ROOM
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- ROOM -->
+
+<div class="room-card">
+
+<div class="room-image room4">
+
+<span>
+FROM $1,200 / NIGHT
+</span>
+
+</div>
+
+<div class="room-content">
+
+<h3>
+Ocean View Villa
+</h3>
+
+<p>
+A private villa overlooking the ocean,
+with a pool, terrace and personal service.
+</p>
+
+<div class="room-info">
+
+<span>🛏 King Bed</span>
+<span>👤 5 Guests</span>
+
+</div>
+
+<button
+class="outline"
+onclick="chooseRoom('Ocean View Villa')">
+
+BOOK ROOM
+
+</button>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     EXPERIENCE
+========================= -->
+
+<section class="experience" id="experience">
+
+<div class="experience-image"></div>
+
+<div class="experience-content">
+
+<div class="gold">
+THE ROYAL ÉLAN EXPERIENCE
+</div>
+
+<h2>
+Where Luxury Meets
+<span>Exceptional Service</span>
+</h2>
+
+<p>
+From the moment you arrive, our dedicated
+team ensures that every detail of your stay
+is unforgettable.
+</p>
+
+
+<div class="features">
+
+
+<div class="feature">
+
+<strong>01</strong>
+
+<h4>
+Private Concierge
+</h4>
+
+<p>
+Personalized service available
+throughout your stay.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<strong>02</strong>
+
+<h4>
+Infinity Pool
+</h4>
+
+<p>
+Relax while enjoying breathtaking views
+and premium poolside service.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<strong>03</strong>
+
+<h4>
+Luxury Spa
+</h4>
+
+<p>
+Discover complete relaxation through
+our signature treatments.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<strong>04</strong>
+
+<h4>
+Fine Dining
+</h4>
+
+<p>
+Taste world-class cuisine prepared
+by our expert chefs.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     RESTAURANT
+========================= -->
+
+<section class="restaurant" id="restaurant">
+
+<div class="section-title">
+
+<div class="gold">
+IMARA ROYALE DINING
+</div>
+
+<h2>
+Culinary Excellence
+</h2>
+
+<p>
+An extraordinary journey of taste,
+from local inspiration to international cuisine.
+</p>
+
+</div>
+
+
+<div class="restaurant-grid">
+
+
+<div class="restaurant-card">
+
+<div class="food-image food1"></div>
+
+<div class="restaurant-card-content">
+
+<h3>
+The Royal Table
+</h3>
+
+<p>
+Fine dining with carefully crafted
+seasonal menus.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="restaurant-card">
+
+<div class="food-image food2"></div>
+
+<div class="restaurant-card-content">
+
+<h3>
+Sky Lounge
+</h3>
+
+<p>
+Signature cocktails, beautiful sunsets
+and sophisticated atmosphere.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="restaurant-card">
+
+<div class="food-image food3"></div>
+
+<div class="restaurant-card-content">
+
+<h3>
+Ocean Café
+</h3>
+
+<p>
+Relaxed dining beside the water with
+fresh seafood and tropical flavors.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     AMENITIES
+========================= -->
+
+<section class="amenities">
+
+<div class="section-title">
+
+<div class="gold">
+WORLD-CLASS FACILITIES
+</div>
+
+<h2>
+Hotel Amenities
+</h2>
+
+</div>
+
+
+<div class="amenity-grid">
+
+
+<div class="amenity">
+
+<div class="amenity-icon">
+🏊
+</div>
+
+<h3>
+Infinity Pool
+</h3>
+
+<p>
+Relax beside our luxurious
+infinity pool.
+</p>
+
+</div>
+
+
+<div class="amenity">
+
+<div class="amenity-icon">
+💆
+</div>
+
+<h3>
+Luxury Spa
+</h3>
+
+<p>
+Enjoy premium wellness
+and relaxation treatments.
+</p>
+
+</div>
+
+
+<div class="amenity">
+
+<div class="amenity-icon">
+🍽️
+</div>
+
+<h3>
+Fine Dining
+</h3>
+
+<p>
+Enjoy exceptional cuisine
+prepared by expert chefs.
+</p>
+
+</div>
+
+
+<div class="amenity">
+
+<div class="amenity-icon">
+🚗
+</div>
+
+<h3>
+Private Parking
+</h3>
+
+<p>
+Secure parking available
+for hotel guests.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="about" id="about">
+
+<div class="about-content">
+
+<div class="gold">
+ABOUT IMARA ROYALE 
+</div>
+
+<h2>
+More Than A Hotel.
+<span>A Destination.</span>
+</h2>
+
+<p>
+IMARA ROYALE  was created for travelers who appreciate
+beauty, comfort and exceptional hospitality.
+</p>
+
+<p>
+Every room, restaurant and experience has been
+carefully designed to create memories that
+last a lifetime.
+</p>
+
+<button class="primary" onclick="scrollBooking()">
+PLAN YOUR STAY
+</button>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="contact" id="contact">
+
+<div class="section-title">
+
+<div class="gold">
+CONTACT US
+</div>
+
+<h2>
+We'd Love To Hear From You
+</h2>
+
+<p>
+Have a question? Send us a message.
+</p>
+
+</div>
+
+
+<form class="contact-form" id="contactForm">
+
+<input
+type="text"
+id="contactName"
+placeholder="Your name"
+required>
+
+<input
+type="email"
+id="contactEmail"
+placeholder="Your email"
+required>
+
+<textarea
+id="contactMessage"
+placeholder="Your message"
+required></textarea>
+
+<button class="primary" type="submit">
+SEND MESSAGE
+</button>
+
+</form>
+
+<div
+class="contact-result"
+id="contactResult">
+</div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<div class="footer-grid">
+
+
+<div>
+
+<div class="logo">
+IMARA   <span> ROYALE </span>
+</div>
+
+<p>
+Luxury hospitality.
+Unforgettable experiences.
+</p>
+
+</div>
+
+
+<div>
+
+<h4>
+Explore
+</h4>
+
+<a href="#home">Home</a>
+<a href="#rooms">Rooms</a>
+<a href="#experience">Experience</a>
+<a href="#restaurant">Restaurant</a>
+
+</div>
+
+
+<div>
+
+<h4>
+Contact
+</h4>
+
+<p>
+Nairobi, Kenya
+</p>
+
+<p>
++254 700 000 000
+</p>
+
+<p>
+reservations@IMARA ROYALE.com
+</p>
+
+</div>
+
+
+<div>
+
+<h4>
+Follow Us
+</h4>
+
+<a href="#">
+Instagram
+</a>
+
+<a href="#">
+Facebook
+</a>
+
+<a href="#">
+TikTok
+</a>
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 IMARA ROYALE .
+All Rights Reserved.
+
+</div>
+
+</footer>
+
+
+<!-- =========================
+     LOGIN MODAL
+========================= -->
+
+<div class="modal" id="loginModal">
+
+<div class="modal-box">
+
+<div class="close" onclick="closeModal()">
+×
+</div>
+
+<h2>
+Guest Login
+</h2>
+
+<form class="modal-form" id="loginForm">
+
+<input
+type="email"
+id="loginEmail"
+placeholder="Email address"
+required>
+
+<input
+type="password"
+id="loginPassword"
+placeholder="Password"
+required>
+
+<button class="primary">
+LOGIN
+</button>
+
+</form>
+
+<div class="switch">
+
+Don't have an account?
+
+<span onclick="showRegister()">
+Create one
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     REGISTER MODAL
+========================= -->
+
+<div class="modal" id="registerModal">
+
+<div class="modal-box">
+
+<div class="close" onclick="closeRegister()">
+×
+</div>
+
+<h2>
+Create Account
+</h2>
+
+<form class="modal-form" id="registerForm">
+
+<input
+type="text"
+id="registerName"
+placeholder="Full name"
+required>
+
+<input
+type="email"
+id="registerEmail"
+placeholder="Email address"
+required>
+
+<input
+type="password"
+id="registerPassword"
+placeholder="Password"
+required>
+
+<button class="primary">
+CREATE ACCOUNT
+</button>
+
+</form>
+
+<div class="switch">
+
+Already have an account?
+
+<span onclick="showLogin()">
+Login
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     NOTIFICATION
+========================= -->
+
+<div class="notification" id="notification">
+</div>
+
+
+<script>
+
+/* =========================
+   NOTIFICATION
+========================= */
+
+function notify(message){
+
+    const box =
+    document.getElementById("notification");
+
+    box.textContent = message;
+
+    box.classList.add("show");
+
+    setTimeout(function(){
+
+        box.classList.remove("show");
+
+    },4000);
+
+}
+
+
+/* =========================
+   BOOKING SCROLL
+========================= */
+
+function scrollBooking(){
+
+    document
+    .getElementById("booking")
+    .scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+
+/* =========================
+   SELECT ROOM
+========================= */
+
+function chooseRoom(roomName){
+
+    document
+    .getElementById("room")
+    .value = roomName;
+
+    scrollBooking();
+
+}
+
+
+/* =========================
+   BOOKING
+========================= */
+
+document
+.getElementById("bookingForm")
+.addEventListener("submit",function(e){
+
+    e.preventDefault();
+
+    const name =
+    document.getElementById("name").value;
+
+    const email =
+    document.getElementById("email").value;
+
+    const phone =
+    document.getElementById("phone").value;
+
+    const room =
+    document.getElementById("room").value;
+
+    const checkin =
+    document.getElementById("checkin").value;
+
+    const checkout =
+    document.getElementById("checkout").value;
+
+    const guests =
+    document.getElementById("guests").value;
+
+    const request =
+    document.getElementById("request").value;
+
+
+    if(
+        new Date(checkout)
+        <=
+        new Date(checkin)
+    ){
+
+        notify(
+        "Check-out must be after check-in."
+        );
+
+        return;
+
+    }
+
+
+    const bookingNumber =
+    Math.floor(
+        100000 +
+        Math.random()*900000
+    );
+
+
+    document
+    .getElementById("bookingResult")
+    .innerHTML =
+
+    "Reservation successful! " +
+    "Your booking number is <strong>#"
+    +
+    bookingNumber
+    +
+    "</strong>.";
+
+
+    notify(
+    "Your reservation has been received."
+    );
+
+
+    this.reset();
+
+});
+
+
+/* =========================
+   CONTACT
+========================= */
+
+document
+.getElementById("contactForm")
+.addEventListener("submit",function(e){
+
+    e.preventDefault();
+
+    const name =
+    document.getElementById("contactName").value;
+
+
+    document
+    .getElementById("contactResult")
+    .textContent =
+    "Thank you, "
+    + name
+    + ". Your message has been received.";
+
+
+    notify(
+    "Message sent successfully."
+    );
+
+
+    this.reset();
+
+});
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+function mobileMenu(){
+
+    const nav =
+    document.querySelector(".nav-links");
+
+    if(nav.style.display === "flex"){
+
+        nav.style.display = "none";
+
+    }else{
+
+        nav.style.display = "flex";
+
+        nav.style.position = "absolute";
+
+        nav.style.top = "80px";
+
+        nav.style.left = "0";
+
+        nav.style.width = "100%";
+
+        nav.style.padding = "30px";
+
+        nav.style.flexDirection = "column";
+
+        nav.style.background = "#080808";
+
+        nav.style.textAlign = "center";
+
+    }
+
+}
+
+
+/* =========================
+   LOGIN
+========================= */
+
+function showLogin(){
+
+    document
+    .getElementById("registerModal")
+    .classList.remove("active");
+
+    document
+    .getElementById("loginModal")
+    .classList.add("active");
+
+}
+
+
+function closeModal(){
+
+    document
+    .getElementById("loginModal")
+    .classList.remove("active");
+
+}
+
+
+/* =========================
+   REGISTER
+========================= */
+
+function showRegister(){
+
+    document
+    .getElementById("loginModal")
+    .classList.remove("active");
+
+    document
+    .getElementById("registerModal")
+    .classList.add("active");
+
+}
+
+
+function closeRegister(){
+
+    document
+    .getElementById("registerModal")
+    .classList.remove("active");
+
+}
+
+
+/* =========================
+   LOGIN FORM
+========================= */
+
+document
+.getElementById("loginForm")
+.addEventListener("submit",function(e){
+
+    e.preventDefault();
+
+    const email =
+    document.getElementById("loginEmail").value;
+
+
+    notify(
+    "Welcome back! Login successful."
+    );
+
+
+    closeModal();
+
+    this.reset();
+
+});
+
+
+/* =========================
+   REGISTER FORM
+========================= */
+
+document
+.getElementById("registerForm")
+.addEventListener("submit",function(e){
+
+    e.preventDefault();
+
+    const name =
+    document.getElementById("registerName").value;
+
+
+    notify(
+    "Welcome, "
+    + name
+    + "! Your account has been created."
+    );
+
+
+    closeRegister();
+
+    this.reset();
+
+});
+
+
+/* =========================
+   DATE SETTINGS
+========================= */
+
+const today =
+new Date()
+.toISOString()
+.split("T")[0];
+
+
+document
+.getElementById("checkin")
+.min = today;
+
+
+document
+.getElementById("checkout")
+.min = today;
+
+
+/* =========================
+   FADE ANIMATION
+========================= */
+
+const observer =
+new IntersectionObserver(
+
+(entries)=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            entry.target.style.opacity="1";
+
+            entry.target.style.transform=
+            "translateY(0)";
+
+        }
+
+    });
+
+},
+
+{
+    threshold:.15
+});
+
+
+document
+.querySelectorAll(
+    ".room-card,.restaurant-card,.amenity,.feature"
+)
+.forEach(element=>{
+
+    element.style.opacity="0";
+
+    element.style.transform=
+    "translateY(30px)";
+
+    element.style.transition=
+    "all .7s ease";
+
+    observer.observe(element);
+
+});
+
+
+</script>
+
+</body>
+</html>
+```
