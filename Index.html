@@ -1,0 +1,2515 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ziro Heritage | Beads, Traditional Outfits & African Ornaments</title>
+
+    <meta name="description"
+          content="Ziro Heritage - African beaded bracelets, traditional outfits, necklaces, earrings and handmade ornaments.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --brown: #5b321d;
+            --dark-brown: #2b170e;
+            --gold: #d6a84f;
+            --cream: #fff8ed;
+            --white: #ffffff;
+            --black: #15100d;
+            --green: #284b36;
+            --red: #9d3028;
+            --shadow: 0 10px 30px rgba(0,0,0,.12);
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--cream);
+            color: var(--black);
+            line-height: 1.6;
+        }
+
+        /* TOP BAR */
+
+        .topbar {
+            background: var(--dark-brown);
+            color: white;
+            text-align: center;
+            padding: 9px;
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,.97);
+            box-shadow: 0 2px 15px rgba(0,0,0,.08);
+        }
+
+        .nav-container {
+            max-width: 1250px;
+            margin: auto;
+            padding: 17px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            font-family: Georgia, serif;
+            font-size: 27px;
+            font-weight: bold;
+            color: var(--brown);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--gold);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--black);
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .icon-btn {
+            border: none;
+            background: #f5eee4;
+            width: 43px;
+            height: 43px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            position: relative;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -4px;
+            right: -4px;
+            background: var(--red);
+            color: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            font-size: 11px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .menu-btn {
+            display: none;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 680px;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(rgba(20,10,5,.65), rgba(20,10,5,.55)),
+                url("https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?auto=format&fit=crop&w=1800&q=85")
+                center/cover;
+            color: white;
+        }
+
+        .hero-content {
+            width: 1250px;
+            max-width: 90%;
+            margin: auto;
+        }
+
+        .hero-small {
+            color: #f2cc79;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-family: Georgia, serif;
+            font-size: clamp(42px, 7vw, 78px);
+            max-width: 800px;
+            line-height: 1.05;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            font-size: 18px;
+            margin-bottom: 35px;
+            color: #f4eee6;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 27px;
+            border-radius: 30px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            transition: .3s;
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: #25170c;
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            background: #e7bd67;
+        }
+
+        .btn-outline {
+            border: 1px solid white;
+            color: white;
+            margin-left: 10px;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--black);
+        }
+
+        /* FEATURES */
+
+        .features {
+            max-width: 1150px;
+            margin: -45px auto 70px;
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            background: white;
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .feature {
+            padding: 28px 20px;
+            text-align: center;
+            border-right: 1px solid #eee;
+        }
+
+        .feature:last-child {
+            border-right: none;
+        }
+
+        .feature-icon {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .feature h3 {
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+
+        .feature p {
+            font-size: 12px;
+            color: #777;
+        }
+
+        /* GENERAL */
+
+        section {
+            padding: 80px 25px;
+        }
+
+        .section-heading {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 45px;
+        }
+
+        .section-heading span {
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .section-heading h2 {
+            font-family: Georgia, serif;
+            font-size: 42px;
+            color: var(--brown);
+            margin: 8px 0;
+        }
+
+        .section-heading p {
+            color: #777;
+        }
+
+        /* CATEGORIES */
+
+        .categories {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+        }
+
+        .category {
+            height: 300px;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .category img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .5s;
+        }
+
+        .category:hover img {
+            transform: scale(1.08);
+        }
+
+        .category-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,.85));
+            display: flex;
+            align-items: flex-end;
+            padding: 25px;
+            color: white;
+        }
+
+        .category h3 {
+            font-family: Georgia, serif;
+            font-size: 25px;
+        }
+
+        /* PRODUCTS */
+
+        .shop-section {
+            background: #f5eee4;
+        }
+
+        .shop-tools {
+            max-width: 1200px;
+            margin: 0 auto 35px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .search-box {
+            width: 350px;
+            max-width: 100%;
+            padding: 14px 18px;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            outline: none;
+            background: white;
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 10px 16px;
+            border: none;
+            background: white;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--brown);
+            color: white;
+        }
+
+        .products {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 23px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 18px rgba(0,0,0,.07);
+            transition: .3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow);
+        }
+
+        .product-image {
+            height: 280px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .5s;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: var(--red);
+            color: white;
+            padding: 5px 10px;
+            font-size: 11px;
+            border-radius: 15px;
+        }
+
+        .heart {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 38px;
+            height: 38px;
+            border: none;
+            border-radius: 50%;
+            background: white;
+            cursor: pointer;
+        }
+
+        .product-info {
+            padding: 18px;
+        }
+
+        .product-category {
+            font-size: 11px;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        .product-info h3 {
+            font-family: Georgia, serif;
+            font-size: 20px;
+            margin: 4px 0 7px;
+        }
+
+        .stars {
+            color: #e0ad39;
+            font-size: 13px;
+        }
+
+        .price {
+            color: var(--brown);
+            font-size: 19px;
+            font-weight: bold;
+            margin: 8px 0 13px;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 7px;
+        }
+
+        .add-btn {
+            flex: 1;
+            border: none;
+            background: var(--brown);
+            color: white;
+            padding: 11px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .view-btn {
+            border: 1px solid #ddd;
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        /* STORY */
+
+        .story {
+            max-width: 1150px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .story-image {
+            height: 550px;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .story-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .story-content span {
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .story-content h2 {
+            font-family: Georgia, serif;
+            color: var(--brown);
+            font-size: 45px;
+            line-height: 1.1;
+            margin: 12px 0 20px;
+        }
+
+        .story-content p {
+            color: #666;
+            margin-bottom: 18px;
+        }
+
+        .story-list {
+            list-style: none;
+            margin: 25px 0;
+        }
+
+        .story-list li {
+            margin: 12px 0;
+        }
+
+        /* LOOKBOOK */
+
+        .lookbook {
+            background: var(--dark-brown);
+            color: white;
+        }
+
+        .lookbook .section-heading h2 {
+            color: white;
+        }
+
+        .gallery {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 15px;
+        }
+
+        .gallery-item {
+            height: 330px;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        /* TESTIMONIALS */
+
+        .testimonials {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,.06);
+        }
+
+        .testimonial .stars {
+            margin-bottom: 15px;
+        }
+
+        .testimonial p {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .testimonial h4 {
+            color: var(--brown);
+        }
+
+        /* NEWSLETTER */
+
+        .newsletter {
+            background:
+                linear-gradient(rgba(45,24,13,.9),rgba(45,24,13,.9)),
+                url("https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1600&q=80")
+                center/cover;
+            color: white;
+            text-align: center;
+        }
+
+        .newsletter h2 {
+            font-family: Georgia, serif;
+            font-size: 42px;
+            margin-bottom: 12px;
+        }
+
+        .newsletter p {
+            color: #ddd;
+            margin-bottom: 25px;
+        }
+
+        .newsletter-form {
+            max-width: 550px;
+            margin: auto;
+            display: flex;
+            background: white;
+            padding: 5px;
+            border-radius: 35px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            border: none;
+            outline: none;
+            padding: 12px 18px;
+            border-radius: 30px;
+        }
+
+        .newsletter-form button {
+            border: none;
+            background: var(--gold);
+            border-radius: 30px;
+            padding: 12px 22px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #160d08;
+            color: #ddd;
+            padding: 60px 25px 20px;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+        }
+
+        footer h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin: 8px 0;
+        }
+
+        footer a {
+            color: #aaa;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: var(--gold);
+        }
+
+        .socials {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .socials a {
+            width: 35px;
+            height: 35px;
+            background: #2b1a11;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .copyright {
+            max-width: 1200px;
+            margin: 45px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid #33251d;
+            text-align: center;
+            color: #777;
+            font-size: 12px;
+        }
+
+        /* CART */
+
+        .cart-panel {
+            position: fixed;
+            top: 0;
+            right: -450px;
+            width: 430px;
+            max-width: 95%;
+            height: 100vh;
+            background: white;
+            z-index: 2000;
+            box-shadow: -10px 0 30px rgba(0,0,0,.2);
+            transition: .4s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cart-panel.open {
+            right: 0;
+        }
+
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .cart-header h2 {
+            font-family: Georgia, serif;
+            color: var(--brown);
+        }
+
+        .close-btn {
+            border: none;
+            background: none;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        .cart-items {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        .cart-item {
+            display: grid;
+            grid-template-columns: 75px 1fr auto;
+            gap: 12px;
+            margin-bottom: 18px;
+            align-items: center;
+        }
+
+        .cart-item img {
+            width: 75px;
+            height: 75px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .cart-item h4 {
+            font-size: 14px;
+        }
+
+        .cart-item small {
+            color: #888;
+        }
+
+        .qty {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 7px;
+        }
+
+        .qty button {
+            border: 1px solid #ddd;
+            background: white;
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+        }
+
+        .remove {
+            border: none;
+            background: none;
+            color: #a33;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .cart-footer {
+            border-top: 1px solid #eee;
+            padding: 20px;
+        }
+
+        .total-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .checkout-btn {
+            width: 100%;
+            border: none;
+            background: var(--brown);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .empty-cart {
+            text-align: center;
+            color: #888;
+            padding: 50px 10px;
+        }
+
+        /* OVERLAY */
+
+        .overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,.55);
+            z-index: 1500;
+            display: none;
+        }
+
+        .overlay.show {
+            display: block;
+        }
+
+        /* MODAL */
+
+        .modal {
+            position: fixed;
+            inset: 0;
+            z-index: 3000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: rgba(0,0,0,.65);
+        }
+
+        .modal.show {
+            display: flex;
+        }
+
+        .modal-content {
+            width: 900px;
+            max-width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            background: white;
+            border-radius: 18px;
+            padding: 25px;
+            position: relative;
+        }
+
+        .modal-close {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            border: none;
+            background: white;
+            font-size: 25px;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        .modal-product {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .modal-product img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .modal-info {
+            padding: 25px 10px;
+        }
+
+        .modal-info h2 {
+            font-family: Georgia, serif;
+            color: var(--brown);
+            font-size: 36px;
+            margin: 8px 0;
+        }
+
+        .modal-info p {
+            color: #666;
+            margin: 20px 0;
+        }
+
+        /* CHECKOUT */
+
+        .checkout-form {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width: 1000px) {
+            .products {
+                grid-template-columns: repeat(3,1fr);
+            }
+
+            .categories {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .features {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .feature:nth-child(2) {
+                border-right: none;
+            }
+
+            .story {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+
+        @media(max-width: 750px) {
+
+            .nav-links {
+                position: absolute;
+                top: 75px;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 25px;
+                display: none;
+                box-shadow: 0 10px 20px rgba(0,0,0,.1);
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .products {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .gallery {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .testimonials {
+                grid-template-columns: 1fr;
+            }
+
+            .shop-tools {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .search-box {
+                width: 100%;
+            }
+        }
+
+        @media(max-width: 550px) {
+
+            .hero {
+                min-height: 600px;
+            }
+
+            .hero h1 {
+                font-size: 43px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+
+            .feature {
+                border-right: none;
+                border-bottom: 1px solid #eee;
+            }
+
+            .categories,
+            .products,
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .category {
+                height: 280px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-product {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-product img {
+                height: 300px;
+            }
+
+            .btn-outline {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+    ✦ HANDCRAFTED AFRICAN HERITAGE ✦ | DELIVERY AVAILABLE ACROSS KENYA
+</div>
+
+<!-- NAVIGATION -->
+
+<nav>
+    <div class="nav-container">
+
+        <a href="#" class="logo">
+            ZIRO<span>HERITAGE</span>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#story">Our Story</a></li>
+            <li><a href="#lookbook">Lookbook</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+
+            <button class="icon-btn" onclick="openCart()">
+                🛒
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+
+            <button class="icon-btn menu-btn" onclick="toggleMenu()">
+                ☰
+            </button>
+
+        </div>
+
+    </div>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="hero-small">
+            African Luxury • Handmade Heritage
+        </div>
+
+        <h1>
+            Wear Your Heritage With Pride.
+        </h1>
+
+        <p>
+            Discover beautifully handcrafted beaded bracelets,
+            traditional outfits, necklaces, earrings and African
+            ornaments inspired by generations of creativity.
+        </p>
+
+        <a href="#shop" class="btn btn-gold">
+            Explore Collection
+        </a>
+
+        <a href="#story" class="btn btn-outline">
+            Our Story
+        </a>
+
+    </div>
+
+</section>
+
+<!-- FEATURES -->
+
+<div class="features">
+
+    <div class="feature">
+        <div class="feature-icon">🧿</div>
+        <h3>Handcrafted</h3>
+        <p>Made with care by skilled artisans.</p>
+    </div>
+
+    <div class="feature">
+        <div class="feature-icon">🌍</div>
+        <h3>African Inspired</h3>
+        <p>Celebrating African culture and identity.</p>
+    </div>
+
+    <div class="feature">
+        <div class="feature-icon">🚚</div>
+        <h3>Kenya Delivery</h3>
+        <p>Delivery available across Kenya.</p>
+    </div>
+
+    <div class="feature">
+        <div class="feature-icon">💎</div>
+        <h3>Premium Quality</h3>
+        <p>Beautiful materials and detailed finishing.</p>
+    </div>
+
+</div>
+
+<!-- CATEGORIES -->
+
+<section>
+
+    <div class="section-heading">
+
+        <span>Shop By Category</span>
+
+        <h2>Our Heritage Collection</h2>
+
+        <p>
+            Find pieces that tell a story and celebrate African creativity.
+        </p>
+
+    </div>
+
+    <div class="categories">
+
+        <div class="category" onclick="filterCategory('Bracelets')">
+            <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=900&q=80">
+            <div class="category-overlay">
+                <h3>Beaded Bracelets</h3>
+            </div>
+        </div>
+
+        <div class="category" onclick="filterCategory('Outfits')">
+            <img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?auto=format&fit=crop&w=900&q=80">
+            <div class="category-overlay">
+                <h3>Traditional Outfits</h3>
+            </div>
+        </div>
+
+        <div class="category" onclick="filterCategory('Necklaces')">
+            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=900&q=80">
+            <div class="category-overlay">
+                <h3>Necklaces</h3>
+            </div>
+        </div>
+
+        <div class="category" onclick="filterCategory('Ornaments')">
+            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=900&q=80">
+            <div class="category-overlay">
+                <h3>Ornaments</h3>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SHOP -->
+
+<section class="shop-section" id="shop">
+
+    <div class="section-heading">
+
+        <span>Our Collection</span>
+
+        <h2>Shop African Luxury</h2>
+
+        <p>
+            Handmade pieces for everyday style, celebrations,
+            weddings and cultural events.
+        </p>
+
+    </div>
+
+    <div class="shop-tools">
+
+        <input
+            type="text"
+            id="search"
+            class="search-box"
+            placeholder="Search bracelets, outfits, necklaces..."
+            oninput="searchProducts()"
+        >
+
+        <div class="filter-buttons">
+
+            <button class="filter-btn active"
+                    onclick="filterCategory('All', this)">
+                All
+            </button>
+
+            <button class="filter-btn"
+                    onclick="filterCategory('Bracelets', this)">
+                Bracelets
+            </button>
+
+            <button class="filter-btn"
+                    onclick="filterCategory('Outfits', this)">
+                Outfits
+            </button>
+
+            <button class="filter-btn"
+                    onclick="filterCategory('Necklaces', this)">
+                Necklaces
+            </button>
+
+            <button class="filter-btn"
+                    onclick="filterCategory('Earrings', this)">
+                Earrings
+            </button>
+
+            <button class="filter-btn"
+                    onclick="filterCategory('Ornaments', this)">
+                Ornaments
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="products" id="products"></div>
+
+</section>
+
+<!-- STORY -->
+
+<section id="story">
+
+    <div class="story">
+
+        <div class="story-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1000&q=85"
+                alt="African handmade art"
+            >
+
+        </div>
+
+        <div class="story-content">
+
+            <span>Our Story</span>
+
+            <h2>
+                Tradition Made Beautiful.
+            </h2>
+
+            <p>
+                Ziro Heritage was created to celebrate the beauty,
+                creativity and craftsmanship found throughout Africa.
+            </p>
+
+            <p>
+                Every bracelet, necklace, outfit and ornament is inspired
+                by traditional African colours, patterns and craftsmanship.
+            </p>
+
+            <ul class="story-list">
+
+                <li>✓ Handmade and carefully selected</li>
+                <li>✓ African-inspired designs</li>
+                <li>✓ Suitable for celebrations and everyday fashion</li>
+                <li>✓ Supporting local creativity</li>
+
+            </ul>
+
+            <a href="#shop" class="btn btn-gold">
+                Shop Our Collection
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- LOOKBOOK -->
+
+<section class="lookbook" id="lookbook">
+
+    <div class="section-heading">
+
+        <span>Style Inspiration</span>
+
+        <h2>Heritage Lookbook</h2>
+
+        <p style="color:#ccc;">
+            Discover ways to combine traditional fashion with modern style.
+        </p>
+
+    </div>
+
+    <div class="gallery">
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=900&q=80">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=900&q=80">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=900&q=80">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=900&q=80">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=80">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=900&q=80">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- TESTIMONIALS -->
+
+<section>
+
+    <div class="section-heading">
+
+        <span>Customer Love</span>
+
+        <h2>What Our Customers Say</h2>
+
+    </div>
+
+    <div class="testimonials">
+
+        <div class="testimonial">
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+                "The bracelet was beautiful and exactly what I expected.
+                The beadwork was amazing."
+            </p>
+
+            <h4>— Amina, Nairobi</h4>
+
+        </div>
+
+        <div class="testimonial">
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+                "I bought a traditional outfit for a cultural celebration.
+                Everyone loved it."
+            </p>
+
+            <h4>— Brian, Nakuru</h4>
+
+        </div>
+
+        <div class="testimonial">
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+                "Beautiful African jewellery and excellent presentation.
+                I will definitely order again."
+            </p>
+
+            <h4>— Sheila, Mombasa</h4>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- NEWSLETTER -->
+
+<section class="newsletter">
+
+    <h2>Join the Heritage Circle</h2>
+
+    <p>
+        Get new collection announcements, offers and style inspiration.
+    </p>
+
+    <form class="newsletter-form"
+          onsubmit="subscribe(event)">
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Your email address"
+            required
+        >
+
+        <button type="submit">
+            Subscribe
+        </button>
+
+    </form>
+
+</section>
+
+<!-- CONTACT / CHECKOUT -->
+
+<section id="contact">
+
+    <div class="section-heading">
+
+        <span>Get In Touch</span>
+
+        <h2>Place Your Order</h2>
+
+        <p>
+            Fill in your details and we'll prepare your order.
+        </p>
+
+    </div>
+
+    <form class="checkout-form"
+          onsubmit="submitOrder(event)">
+
+        <div class="form-group">
+            <label>Full Name</label>
+            <input type="text"
+                   id="customerName"
+                   required
+                   placeholder="Your full name">
+        </div>
+
+        <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel"
+                   id="customerPhone"
+                   required
+                   placeholder="07XXXXXXXX">
+        </div>
+
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email"
+                   id="customerEmail"
+                   required
+                   placeholder="you@example.com">
+        </div>
+
+        <div class="form-group">
+            <label>Delivery Location</label>
+            <input type="text"
+                   id="customerLocation"
+                   required
+                   placeholder="Nairobi, Mombasa, Kisumu...">
+        </div>
+
+        <div class="form-group">
+            <label>Order Notes</label>
+            <textarea id="orderNotes"
+                      placeholder="Size, colour preference or other instructions"></textarea>
+        </div>
+
+        <button class="checkout-btn" type="submit">
+            Send Order via WhatsApp
+        </button>
+
+    </form>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-grid">
+
+        <div>
+
+            <h3 class="logo" style="color:white;">
+                ZIRO<span>HERITAGE</span>
+            </h3>
+
+            <p>
+                African-inspired handmade bracelets,
+                traditional outfits, jewellery and ornaments
+                created to celebrate culture and style.
+            </p>
+
+            <div class="socials">
+                <a href="#">f</a>
+                <a href="#">◎</a>
+                <a href="#">𝕏</a>
+                <a href="#">▶</a>
+            </div>
+
+        </div>
+
+        <div>
+
+            <h3>Shop</h3>
+
+            <ul>
+                <li><a href="#shop">Bracelets</a></li>
+                <li><a href="#shop">Traditional Outfits</a></li>
+                <li><a href="#shop">Necklaces</a></li>
+                <li><a href="#shop">Earrings</a></li>
+                <li><a href="#shop">Ornaments</a></li>
+            </ul>
+
+        </div>
+
+        <div>
+
+            <h3>Information</h3>
+
+            <ul>
+                <li><a href="#story">Our Story</a></li>
+                <li><a href="#lookbook">Lookbook</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">Delivery</a></li>
+                <li><a href="#">Returns</a></li>
+            </ul>
+
+        </div>
+
+        <div>
+
+            <h3>Contact</h3>
+
+            <p>📍 Nairobi, Kenya</p>
+            <p>📞 +254 700 000 000</p>
+            <p>✉ info@ziroheritage.com</p>
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 Ziro Heritage. All Rights Reserved.
+    </div>
+
+</footer>
+
+<!-- CART -->
+
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
+
+<div class="cart-panel" id="cartPanel">
+
+    <div class="cart-header">
+
+        <h2>Your Cart</h2>
+
+        <button class="close-btn"
+                onclick="closeCart()">
+            ×
+        </button>
+
+    </div>
+
+    <div class="cart-items" id="cartItems"></div>
+
+    <div class="cart-footer">
+
+        <div class="total-row">
+            <span>Total</span>
+            <span id="cartTotal">KES 0</span>
+        </div>
+
+        <button class="checkout-btn"
+                onclick="goToCheckout()">
+            Proceed to Order
+        </button>
+
+    </div>
+
+</div>
+
+<!-- PRODUCT MODAL -->
+
+<div class="modal" id="productModal">
+
+    <div class="modal-content">
+
+        <button class="modal-close"
+                onclick="closeProductModal()">
+            ×
+        </button>
+
+        <div class="modal-product">
+
+            <img id="modalImage" src="" alt="Product">
+
+            <div class="modal-info">
+
+                <div class="product-category"
+                     id="modalCategory">
+                </div>
+
+                <h2 id="modalName"></h2>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <div class="price"
+                     id="modalPrice">
+                </div>
+
+                <p id="modalDescription"></p>
+
+                <button class="add-btn"
+                        id="modalAdd">
+                    Add To Cart
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+    /* ==========================================
+       PRODUCT DATABASE
+       ========================================== */
+
+    const products = [
+
+        {
+            id: 1,
+            name: "Maasai Sunset Bracelet",
+            category: "Bracelets",
+            price: 1200,
+            image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=800&q=80",
+            description: "A colourful handmade bead bracelet inspired by traditional East African beadwork."
+        },
+
+        {
+            id: 2,
+            name: "Royal Beaded Bracelet",
+            category: "Bracelets",
+            price: 1500,
+            image: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=800&q=80",
+            description: "Elegant beadwork designed for both traditional ceremonies and modern outfits."
+        },
+
+        {
+            id: 3,
+            name: "Heritage Beaded Necklace",
+            category: "Necklaces",
+            price: 2800,
+            image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80",
+            description: "A statement necklace inspired by African cultural patterns."
+        },
+
+        {
+            id: 4,
+            name: "African Pearl Necklace",
+            category: "Necklaces",
+            price: 3200,
+            image: "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=800&q=80",
+            description: "A refined necklace combining traditional inspiration with contemporary styling."
+        },
+
+        {
+            id: 5,
+            name: "Traditional Heritage Dress",
+            category: "Outfits",
+            price: 6500,
+            image: "https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?auto=format&fit=crop&w=800&q=80",
+            description: "A beautiful traditional-inspired outfit suitable for ceremonies and cultural celebrations."
+        },
+
+        {
+            id: 6,
+            name: "African Celebration Outfit",
+            category: "Outfits",
+            price: 7800,
+            image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80",
+            description: "A colourful statement outfit designed for special occasions."
+        },
+
+        {
+            id: 7,
+            name: "Traditional Beaded Earrings",
+            category: "Earrings",
+            price: 950,
+            image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80",
+            description: "Lightweight handmade earrings with beautiful African-inspired colours."
+        },
+
+        {
+            id: 8,
+            name: "Golden Heritage Earrings",
+            category: "Earrings",
+            price: 1400,
+            image: "https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=800&q=80",
+            description: "Elegant earrings designed to complement both traditional and modern fashion."
+        },
+
+        {
+            id: 9,
+            name: "Ceremonial Waist Beads",
+            category: "Ornaments",
+            price: 1800,
+            image: "https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=80",
+            description: "Beautiful decorative beadwork inspired by African ceremonial fashion."
+        },
+
+        {
+            id: 10,
+            name: "Heritage Head Ornament",
+            category: "Ornaments",
+            price: 2300,
+            image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=80",
+            description: "A statement traditional ornament for cultural celebrations and fashion events."
+        },
+
+        {
+            id: 11,
+            name: "Colourful Artisan Bracelet",
+            category: "Bracelets",
+            price: 1100,
+            image: "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=800&q=80",
+            description: "A bright handcrafted bracelet with vibrant African-inspired colours."
+        },
+
+        {
+            id: 12,
+            name: "Royal Ceremony Necklace",
+            category: "Necklaces",
+            price: 3500,
+            image: "https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?auto=format&fit=crop&w=800&q=80",
+            description: "A premium necklace created for weddings, ceremonies and special occasions."
+        }
+
+    ];
+
+    /* ==========================================
+       CART
+       ========================================== */
+
+    let cart = JSON.parse(localStorage.getItem("ziroCart")) || [];
+
+    let currentCategory = "All";
+
+    /* ==========================================
+       FORMAT MONEY
+       ========================================== */
+
+    function formatMoney(amount) {
+
+        return "KES " + amount.toLocaleString();
+
+    }
+
+    /* ==========================================
+       DISPLAY PRODUCTS
+       ========================================== */
+
+    function displayProducts(list = products) {
+
+        const container = document.getElementById("products");
+
+        container.innerHTML = "";
+
+        if (list.length === 0) {
+
+            container.innerHTML = `
+                <div style="
+                    grid-column:1/-1;
+                    text-align:center;
+                    padding:50px;
+                ">
+                    <h3>No products found</h3>
+                    <p>Try another search or category.</p>
+                </div>
+            `;
+
+            return;
+        }
+
+        list.forEach(product => {
+
+            container.innerHTML += `
+
+                <div class="product-card">
+
+                    <div class="product-image">
+
+                        <img
+                            src="${product.image}"
+                            alt="${product.name}"
+                        >
+
+                        <span class="badge">
+                            Handmade
+                        </span>
+
+                        <button
+                            class="heart"
+                            onclick="favoriteProduct(this)"
+                        >
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            ${product.category}
+                        </div>
+
+                        <h3>
+                            ${product.name}
+                        </h3>
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                        <div class="price">
+                            ${formatMoney(product.price)}
+                        </div>
+
+                        <div class="product-actions">
+
+                            <button
+                                class="add-btn"
+                                onclick="addToCart(${product.id})"
+                            >
+                                Add to Cart
+                            </button>
+
+                            <button
+                                class="view-btn"
+                                onclick="viewProduct(${product.id})"
+                            >
+                                👁
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            `;
+
+        });
+
+    }
+
+    /* ==========================================
+       FILTER
+       ========================================== */
+
+    function filterCategory(category, button) {
+
+        currentCategory = category;
+
+        document.querySelectorAll(".filter-btn")
+            .forEach(btn => btn.classList.remove("active"));
+
+        if (button) {
+            button.classList.add("active");
+        }
+
+        const search =
+            document.getElementById("search")
+                .value
+                .toLowerCase();
+
+        let filtered = products;
+
+        if (category !== "All") {
+
+            filtered = filtered.filter(
+                p => p.category === category
+            );
+
+        }
+
+        if (search) {
+
+            filtered = filtered.filter(p =>
+                p.name.toLowerCase().includes(search) ||
+                p.category.toLowerCase().includes(search)
+            );
+
+        }
+
+        displayProducts(filtered);
+
+        document.getElementById("shop")
+            .scrollIntoView({
+                behavior: "smooth"
+            });
+
+    }
+
+    /* ==========================================
+       SEARCH
+       ========================================== */
+
+    function searchProducts() {
+
+        const search =
+            document.getElementById("search")
+                .value
+                .toLowerCase();
+
+        let filtered = products;
+
+        if (currentCategory !== "All") {
+
+            filtered = filtered.filter(
+                p => p.category === currentCategory
+            );
+
+        }
+
+        if (search) {
+
+            filtered = filtered.filter(p =>
+                p.name.toLowerCase().includes(search) ||
+                p.category.toLowerCase().includes(search) ||
+                p.description.toLowerCase().includes(search)
+            );
+
+        }
+
+        displayProducts(filtered);
+
+    }
+
+    /* ==========================================
+       ADD CART
+       ========================================== */
+
+    function addToCart(id) {
+
+        const product =
+            products.find(p => p.id === id);
+
+        const existing =
+            cart.find(item => item.id === id);
+
+        if (existing) {
+
+            existing.quantity++;
+
+        } else {
+
+            cart.push({
+                ...product,
+                quantity: 1
+            });
+
+        }
+
+        saveCart();
+
+        updateCart();
+
+        openCart();
+
+    }
+
+    /* ==========================================
+       SAVE CART
+       ========================================== */
+
+    function saveCart() {
+
+        localStorage.setItem(
+            "ziroCart",
+            JSON.stringify(cart)
+        );
+
+    }
+
+    /* ==========================================
+       UPDATE CART
+       ========================================== */
+
+    function updateCart() {
+
+        const container =
+            document.getElementById("cartItems");
+
+        const count =
+            cart.reduce(
+                (total, item) =>
+                    total + item.quantity,
+                0
+            );
+
+        document.getElementById("cartCount")
+            .textContent = count;
+
+        if (cart.length === 0) {
+
+            container.innerHTML = `
+                <div class="empty-cart">
+                    <div style="font-size:45px;">
+                        🛒
+                    </div>
+
+                    <h3>Your cart is empty</h3>
+
+                    <p>
+                        Add some beautiful heritage pieces.
+                    </p>
+                </div>
+            `;
+
+            document.getElementById("cartTotal")
+                .textContent = "KES 0";
+
+            return;
+
+        }
+
+        container.innerHTML = "";
+
+        let total = 0;
+
+        cart.forEach(item => {
+
+            total +=
+                item.price * item.quantity;
+
+            container.innerHTML += `
+
+                <div class="cart-item">
+
+                    <img
+                        src="${item.image}"
+                        alt="${item.name}"
+                    >
+
+                    <div>
+
+                        <h4>
+                            ${item.name}
+                        </h4>
+
+                        <small>
+                            ${formatMoney(item.price)}
+                        </small>
+
+                        <div class="qty">
+
+                            <button
+                                onclick="changeQuantity(${item.id}, -1)"
+                            >
+                                −
+                            </button>
+
+                            <span>
+                                ${item.quantity}
+                            </span>
+
+                            <button
+                                onclick="changeQuantity(${item.id}, 1)"
+                            >
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <button
+                        class="remove"
+                        onclick="removeFromCart(${item.id})"
+                    >
+                        Remove
+                    </button>
+
+                </div>
+            `;
+
+        });
+
+        document.getElementById("cartTotal")
+            .textContent = formatMoney(total);
+
+    }
+
+    /* ==========================================
+       QUANTITY
+       ========================================== */
+
+    function changeQuantity(id, amount) {
+
+        const item =
+            cart.find(item => item.id === id);
+
+        if (!item) return;
+
+        item.quantity += amount;
+
+        if (item.quantity <= 0) {
+
+            cart =
+                cart.filter(item => item.id !== id);
+
+        }
+
+        saveCart();
+
+        updateCart();
+
+    }
+
+    /* ==========================================
+       REMOVE
+       ========================================== */
+
+    function removeFromCart(id) {
+
+        cart =
+            cart.filter(item => item.id !== id);
+
+        saveCart();
+
+        updateCart();
+
+    }
+
+    /* ==========================================
+       CART OPEN / CLOSE
+       ========================================== */
+
+    function openCart() {
+
+        document
+            .getElementById("cartPanel")
+            .classList.add("open");
+
+        document
+            .getElementById("overlay")
+            .classList.add("show");
+
+    }
+
+    function closeCart() {
+
+        document
+            .getElementById("cartPanel")
+            .classList.remove("open");
+
+        document
+            .getElementById("overlay")
+            .classList.remove("show");
+
+    }
+
+    /* ==========================================
+       PRODUCT MODAL
+       ========================================== */
+
+    function viewProduct(id) {
+
+        const product =
+            products.find(p => p.id === id);
+
+        document.getElementById("modalImage")
+            .src = product.image;
+
+        document.getElementById("modalCategory")
+            .textContent = product.category;
+
+        document.getElementById("modalName")
+            .textContent = product.name;
+
+        document.getElementById("modalPrice")
+            .textContent = formatMoney(product.price);
+
+        document.getElementById("modalDescription")
+            .textContent = product.description;
+
+        document.getElementById("modalAdd")
+            .onclick = function() {
+
+                addToCart(product.id);
+
+                closeProductModal();
+
+            };
+
+        document
+            .getElementById("productModal")
+            .classList.add("show");
+
+    }
+
+    function closeProductModal() {
+
+        document
+            .getElementById("productModal")
+            .classList.remove("show");
+
+    }
+
+    /* ==========================================
+       FAVORITE
+       ========================================== */
+
+    function favoriteProduct(button) {
+
+        if (button.textContent === "♡") {
+
+            button.textContent = "♥";
+
+        } else {
+
+            button.textContent = "♡";
+
+        }
+
+    }
+
+    /* ==========================================
+       MOBILE MENU
+       ========================================== */
+
+    function toggleMenu() {
+
+        document
+            .getElementById("navLinks")
+            .classList.toggle("show");
+
+    }
+
+    /* ==========================================
+       GO TO CHECKOUT
+       ========================================== */
+
+    function goToCheckout() {
+
+        if (cart.length === 0) {
+
+            alert("Your cart is empty.");
+
+            return;
+
+        }
+
+        closeCart();
+
+        document
+            .getElementById("contact")
+            .scrollIntoView({
+                behavior: "smooth"
+            });
+
+    }
+
+    /* ==========================================
+       WHATSAPP ORDER
+       ========================================== */
+
+    function submitOrder(event) {
+
+        event.preventDefault();
+
+        if (cart.length === 0) {
+
+            alert(
+                "Please add at least one product to your cart."
+            );
+
+            return;
+
+        }
+
+        const name =
+            document.getElementById("customerName")
+                .value;
+
+        const phone =
+            document.getElementById("customerPhone")
+                .value;
+
+        const email =
+            document.getElementById("customerEmail")
+                .value;
+
+        const location =
+            document.getElementById("customerLocation")
+                .value;
+
+        const notes =
+            document.getElementById("orderNotes")
+                .value;
+
+        let message =
+            "Hello Ziro Heritage!%0A%0A";
+
+        message +=
+            "*NEW ORDER*%0A%0A";
+
+        message +=
+            "Customer: " +
+            encodeURIComponent(name) +
+            "%0A";
+
+        message +=
+            "Phone: " +
+            encodeURIComponent(phone) +
+            "%0A";
+
+        message +=
+            "Email: " +
+            encodeURIComponent(email) +
+            "%0A";
+
+        message +=
+            "Location: " +
+            encodeURIComponent(location) +
+            "%0A%0A";
+
+        message +=
+            "*ORDER ITEMS*%0A";
+
+        let total = 0;
+
+        cart.forEach(item => {
+
+            const subtotal =
+                item.price * item.quantity;
+
+            total += subtotal;
+
+            message +=
+                encodeURIComponent(
+                    item.name +
+                    " x " +
+                    item.quantity +
+                    " = " +
+                    formatMoney(subtotal)
+                ) +
+                "%0A";
+
+        });
+
+        message +=
+            "%0A*TOTAL: " +
+            encodeURIComponent(
+                formatMoney(total)
+            ) +
+            "*%0A";
+
+        message +=
+            "Notes: " +
+            encodeURIComponent(notes);
+
+        /*
+            CHANGE THIS NUMBER TO YOUR REAL
+            WHATSAPP BUSINESS NUMBER.
+
+            Kenya format:
+            2547XXXXXXXX
+        */
+
+        const whatsappNumber =
+            "254700000000";
+
+        const url =
+            "https://wa.me/" +
+            whatsappNumber +
+            "?text=" +
+            message;
+
+        window.open(url, "_blank");
+
+    }
+
+    /* ==========================================
+       NEWSLETTER
+       ========================================== */
+
+    function subscribe(event) {
+
+        event.preventDefault();
+
+        const email =
+            document.getElementById("email")
+                .value;
+
+        alert(
+            "Thank you! " +
+            email +
+            " has been added to our Heritage Circle."
+        );
+
+        document
+            .getElementById("email")
+            .value = "";
+
+    }
+
+    /* ==========================================
+       CLOSE MODAL ON BACKGROUND
+       ========================================== */
+
+    document
+        .getElementById("productModal")
+        .addEventListener("click", function(event) {
+
+            if (event.target === this) {
+
+                closeProductModal();
+
+            }
+
+        });
+
+    /* ==========================================
+       INITIALIZE
+       ========================================== */
+
+    displayProducts();
+
+    updateCart();
+
+</script>
+
+</body>
+</html>
+```
